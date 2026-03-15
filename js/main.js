@@ -1,5 +1,4 @@
 // burger
-
 (function () {
 	const burger = document.querySelector('.burger');
 	const drawer = document.getElementById('mobileMenu');
@@ -8,19 +7,45 @@
 
 	if (!burger || !drawer || !overlay) return;
 
-	const openMenu = () => {
+	let scrollTop = 0;
+
+	const lockScroll = () => {
+		scrollTop = window.pageYOffset || window.scrollY || 0;
+
 		document.body.classList.add('menu-open');
+		document.body.style.position = 'fixed';
+		document.body.style.top = `-${scrollTop}px`;
+		document.body.style.left = '0';
+		document.body.style.right = '0';
+		document.body.style.width = '100%';
+	};
+
+	const unlockScroll = () => {
+		document.body.classList.remove('menu-open');
+		document.body.style.position = '';
+		document.body.style.top = '';
+		document.body.style.left = '';
+		document.body.style.right = '';
+		document.body.style.width = '';
+
+		window.scrollTo(0, scrollTop);
+	};
+
+	const openMenu = () => {
+		lockScroll();
 		overlay.hidden = false;
 		burger.setAttribute('aria-expanded', 'true');
 		drawer.setAttribute('aria-hidden', 'false');
 	};
 
 	const closeMenu = () => {
-		document.body.classList.remove('menu-open');
 		burger.setAttribute('aria-expanded', 'false');
 		drawer.setAttribute('aria-hidden', 'true');
 
-		window.setTimeout(() => { overlay.hidden = true; }, 250);
+		window.setTimeout(() => {
+			overlay.hidden = true;
+			unlockScroll();
+		}, 250);
 	};
 
 	burger.addEventListener('click', () => {
@@ -29,7 +54,10 @@
 	});
 
 	overlay.addEventListener('click', closeMenu);
-	closeBtn && closeBtn.addEventListener('click', closeMenu);
+
+	if (closeBtn) {
+		closeBtn.addEventListener('click', closeMenu);
+	}
 
 	window.addEventListener('keydown', (e) => {
 		if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
@@ -42,13 +70,13 @@
 		if (link) closeMenu();
 	});
 
-	// ✅ фикс бага при ресайзе: если ушли на десктоп — закрываем меню
+	// фикс при ресайзе: если ушли на десктоп — закрываем меню корректно
 	window.addEventListener('resize', () => {
 		if (window.innerWidth > 1000 && document.body.classList.contains('menu-open')) {
-			document.body.classList.remove('menu-open');
+			drawer.setAttribute('aria-hidden', 'true');
 			overlay.hidden = true;
 			burger.setAttribute('aria-expanded', 'false');
-			drawer.setAttribute('aria-hidden', 'true');
+			unlockScroll();
 		}
 	});
 })();
