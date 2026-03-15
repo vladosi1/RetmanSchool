@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* =========================
+   FOUNDER (Засновниця Школи) — DESKTOP
+   ========================= */
+.founder {
+  padding: 90px 0 110px;
+  background: #fff;
+  /* pills */
+}
+.founder__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 80px;
+}
+.founder__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  max-width: 720px;
+}
+.founder__title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 28px;
+  color: #181A1B;
+}
+.founder__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+  margin: 0 0 44px;
+}
+.founder__stat {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #EEF7FB;
+  border-radius: 18px;
+  padding: 18px 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+}
+.founder__stat-value {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #181A1B;
+  letter-spacing: 0.2px;
+}
+.founder__text p {
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #181A1B;
+}
+.founder__text p:last-child {
+  margin-bottom: 0;
+}
+.founder__media {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 520px;
+          flex: 0 0 520px;
+  max-width: 520px;
+}
+.founder__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="shortcut icon" href="./assets/img/Logo.svg" type="image/x-icon" sizes="32x32">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+	<title>Retman School</title>
+	<!-- Reset -->
+	<link rel="stylesheet" href="./css/normalize.css">
+	<!-- Main styles -->
+	<link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+	<header class="header" id="header">
+		<div class="container">
+			<nav class="nav_desktop">
+				<ul>
+					<li><a href="index.html"><img src="./assets/img/home_img.svg" class="home_img" alt="home_img"></a></li>
+					<li><a class="hover-underline-animation-center" href="#courses">Курси</a></li>
+					<li><a class="hover-underline-animation-center" href="schedule.html">Розклад</a></li>
+					<li><a class="hover-underline-animation-center" href="shop.html">Магазин</a></li>
+					<li><a class="hover-underline-animation-center" href="aboutSchool.html">Про школу</a></li>
+					<li><a class="hover-underline-animation-center" href="contacts.html">Контакти</a></li>
+					<li class="tel hover-underline-animation-center"><a id="tel" href="tel:+380971695714">+38 (097)
+							169-57-14</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- MOBILE HEADER -->
+		<div class="nav_mobile">
+			<button class="burger" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu"
+				aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+
+			<a class="nav_mobile__logo" href="index.html" aria-label="Головна">
+				<img src="./assets/img/Logo.svg" alt="Школа масажу" onerror="this.style.display='none'">
+				<span style="font-weight:700; display:none;">LOGO</span>
+			</a>
+
+			<a class="nav_mobile__phone" href="tel:+380971695714" aria-label="Подзвонити">
+				<img src="./assets/img/tel.svg" alt="tel">
+
+			</a>
+		</div>
+
+
+
+
+		<!-- Mobile drawer + overlay -->
+		<div class="overlay" id="menuOverlay" hidden></div>
+
+		<aside class="drawer" id="mobileMenu" aria-hidden="true">
+			<div class="drawer__top">
+				<a class="drawer__home" href="index.html" aria-label="Головна">
+					<img src="./assets/img/Logo.svg" alt="" onerror="this.style.display='none'">
+				</a>
+				<button class="drawer__close" type="button" aria-label="Закрити меню">×</button>
+			</div>
+
+			<nav class="drawer__nav">
+				<ul>
+					<li><a href="#courses">Курси</a></li>
+					<li><a href="schedule.html">Розклад</a></li>
+					<li><a href="shop.html">Магазин</a></li>
+					<li><a href="aboutSchool.html">Про школу</a></li>
+					<li><a href="contacts.html">Контакти</a></li>
+				</ul>
+
+			</nav>
+
+			<div class="drawer__bottom drawer__bottom--contacts">
+				<div class="footer__col footer__col--contacts">
+					<h3 class="footer__title">Контакти</h3>
+
+					<div class="footer__contacts">
+
+						<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+							+38 (097) 169-57-14
+							<span>Світлана Ретьман</span>
+						</a>
+
+						<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+							target="_blank">
+							Адреса школи:
+							<span>м. Київ, вул. Джона Маккейна 13/2</span>
+						</a>
+
+						<div class="footer__socials">
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/viber_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/tiktok_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/Telegram-Icon.svg" alt="Telegram">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</aside>
+	</header>
+
+	<section class="about-school">
+		<div class="container">
+
+			<!-- Breadcrumbs (пока статически, при натяжке заменится на WP/Yoast) -->
+			<nav class="breadcrumbs" aria-label="Breadcrumb">
+				<a class="breadcrumbs__link" href="index.html">Головна</a>
+				<span class="breadcrumbs__sep">—</span>
+				<span class="breadcrumbs__current">Про школу</span>
+			</nav>
+
+			<!-- Title + Intro -->
+			<header class="about-school__head">
+				<h1 class="about-school__title">Про школу</h1>
+
+				<div class="about-school__intro">
+					<p>
+						Школа масажу Світлани Ретьман — це школа професійного масажу для тих, хто хоче не просто
+						отримати сертифікат, а стати впевненим і затребуваним майстром.
+					</p>
+					<p>
+						Ми навчаємо масажу через практику, правильну постановку рук і глибоке розуміння роботи з тілом.
+					</p>
+					<p>
+						Наш підхід базується на авторських техніках викладачів із досвідом понад 12 років, які постійно
+						вдосконалюють свої навички та навчаються новому.
+					</p>
+				</div>
+			</header>
+
+			<!-- Approach block (image + content) -->
+			<div class="about-school__approach approach">
+				<div class="approach__row">
+
+					<!-- Left: image -->
+					<div class="approach__media">
+						<img class="approach__img" src="./assets/img/aboutSchool__img.jpg"
+							alt="Світлана Ретьман у навчальному класі" loading="lazy">
+					</div>
+
+					<!-- Right: content -->
+					<div class="approach__content">
+						<h2 class="approach__title">Наш підхід</h2>
+
+						<div class="approach__text">
+							<p>
+								90% навчального процесу — це практика. Ми переконані: справжня майстерність народжується в
+								роботі руками, а не в конспектах. Саме тому в Школі масажу Світлани Ретьман ми приділяємо
+								особливу увагу:
+							</p>
+						</div>
+
+						<ul class="list-check approach__list">
+							<li class="list-check__item">
+								<span class="list-check__icon" aria-hidden="true">
+									<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+										<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span class="list-check__text">ергономіці роботи майстра</span>
+							</li>
+
+							<li class="list-check__item">
+								<span class="list-check__icon" aria-hidden="true">
+									<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+										<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span class="list-check__text">правильній постановці рук</span>
+							</li>
+
+							<li class="list-check__item">
+								<span class="list-check__icon" aria-hidden="true">
+									<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+										<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span class="list-check__text">безпечній та ефективній роботі з тілом клієнта</span>
+							</li>
+
+							<li class="list-check__item">
+								<span class="list-check__icon" aria-hidden="true">
+									<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+										<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span class="list-check__text">відпрацюванню технік один на одному під контролем
+									викладача</span>
+							</li>
+
+							<li class="list-check__item">
+								<span class="list-check__icon" aria-hidden="true">
+									<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+										<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span class="list-check__text">порадам щодо професійного розвитку після навчання</span>
+							</li>
+						</ul>
+
+						<div class="approach__text approach__text--bottom">
+							<p>
+								Ми навчаємо думати як майстер, а не просто повторювати рухи. Мета Школи масажу Світлани
+								Ретьман — не просто навчити технікам масажу, а сформувати впевнених, грамотних
+								спеціалістів, які глибоко розуміють тіло, працюють усвідомлено, безпечно та результативно.
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="about-forwho">
+		<div class="container">
+
+			<h2 class="about-forwho__title">Для кого наша Школа</h2>
+
+			<div class="about-forwho__grid">
+
+				<!-- Card 1 -->
+				<article class="forwho-card">
+					<h3 class="forwho-card__title">Наші курси підходять:</h3>
+
+					<ul class="list-check forwho-card__list">
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<!-- check icon -->
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">новачкам з 0, які хочуть увійти в професію</span>
+						</li>
+
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">
+								практикуючим масажистам, які прагнуть підвищити рівень, розширити інструментарій і працювати без
+								перевантаження
+							</span>
+						</li>
+					</ul>
+				</article>
+
+				<!-- Card 2 -->
+				<article class="forwho-card">
+					<h3 class="forwho-card__title">
+						Онлайн-курси Школи — це не просто записані уроки. Це живий процес навчання, який включає:
+					</h3>
+
+					<ul class="list-check forwho-card__list">
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">зворотний зв’язок від викладача</span>
+						</li>
+
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">перевірку відео-відпрацювань учнів</span>
+						</li>
+
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">регулярні Zoom-зустрічі</span>
+						</li>
+
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">підтримку та супровід протягом усього навчання</span>
+						</li>
+					</ul>
+				</article>
+
+				<!-- Info 1 -->
+				<article class="forwho-info">
+					<div class="forwho-info__icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M12.3749 32.625H23.6249M17.9999 32.625V23.625M26.9999 15.75C26.9999 12.1894 26.9943 6.28383 26.9914 4.5C26.9914 4.20163 26.8729 3.91548 26.6619 3.7045C26.451 3.49353 26.1648 3.375 25.8664 3.375L10.1312 3.39328C9.83345 3.39328 9.54783 3.51132 9.33696 3.72154C9.12608 3.93176 9.00714 4.21701 9.00621 4.51477C9.00621 6.66492 8.99707 13.597 8.99707 15.75C8.99707 20.2697 14.833 23.625 17.9971 23.625C21.1611 23.625 26.9999 20.2697 26.9999 15.75Z"
+								stroke="#01668B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							<path
+								d="M9 6.75H3.375V7.875C3.375 11.7577 5.73398 15.75 9 15.75M27 6.75H32.625V7.875C32.625 11.7577 30.266 15.75 27 15.75"
+								stroke="#01668B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<p class="forwho-info__text">
+						Навчання доступне у форматі офлайн та онлайн, що дозволяє обрати зручний шлях незалежно від міста чи
+						країни.
+					</p>
+				</article>
+
+				<!-- Info 2 -->
+				<article class="forwho-info">
+					<div class="forwho-info__icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24.1878 10.125C23.9122 13.8424 21.0941 16.875 18.0003 16.875C14.9066 16.875 12.0835 13.8431 11.8128 10.125C11.5316 6.25781 14.2737 3.375 18.0003 3.375C21.7269 3.375 24.469 6.32812 24.1878 10.125Z"
+								stroke="#01668B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							<path
+								d="M18.0002 21.375C11.883 21.375 5.67439 24.75 4.52548 31.1203C4.38697 31.8881 4.8215 32.625 5.62517 32.625H30.3752C31.1795 32.625 31.6141 31.8881 31.4756 31.1203C30.326 24.75 24.1174 21.375 18.0002 21.375Z"
+								stroke="#01668B" stroke-width="2" stroke-miterlimit="10" />
+						</svg>
+					</div>
+					<p class="forwho-info__text">
+						Навіть після завершення курсу зв’язок з викладачем залишається назавжди — ви завжди можете написати,
+						поставити запитання чи отримати пораду.
+					</p>
+				</article>
+
+			</div>
+
+			<!-- ✅ MOBILE ONLY IMAGE -->
+			<div class="about-forwho__mobile-image">
+				<img src="./assets/img/about-forwho-SR-img.jpg" alt="Світлана Ретьман" loading="lazy">
+			</div>
+
+		</div>
+	</section>
+
+	<!-- =========================
+  ABOUT SCHOOL — LAST BLOCK: RESULTS
+========================= -->
+	<section class="about-results">
+		<div class="container">
+
+			<h2 class="about-results__title">Результати, якими ми пишаємося</h2>
+
+			<div class="about-results__grid">
+
+				<!-- Left card -->
+				<article class="results-card">
+					<p class="results-card__lead">
+						За 2,5 роки роботи Школа масажу Світлани Ретьман досягла реальних результатів:
+					</p>
+
+					<ul class="list-check results-card__list">
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">800+ випускників, які успішно будують кар’єру</span>
+						</li>
+
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">70+ проведених курсів</span>
+						</li>
+
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">80% учнів повертаються за новими курсами та напрямками</span>
+						</li>
+
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">75% випускників відкрили власну справу або приватну практику</span>
+						</li>
+					</ul>
+				</article>
+
+				<!-- Right card -->
+				<article class="results-card">
+					<p class="results-card__lead">Ми не стоїмо на місці:</p>
+
+					<ul class="list-check results-card__list">
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">регулярно з’являються нові напрямки та курси</span>
+						</li>
+
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">викладачі постійно навчаються та підвищують кваліфікацію</span>
+						</li>
+
+						<li class="list-check__item">
+							<span class="list-check__icon" aria-hidden="true">
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="11" cy="11" r="10" stroke="#39C64A" stroke-width="2" />
+									<path d="M6.6 11.2L9.6 14.1L15.6 8.4" stroke="#39C64A" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="list-check__text">програми оновлюються відповідно до сучасних підходів і потреб
+								ринку</span>
+						</li>
+					</ul>
+				</article>
+
+			</div>
+
+			<!-- Bottom highlight -->
+			<div class="about-results__note results-note">
+				<span class="results-note__icon" aria-hidden="true">
+					<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="1.5" y="1.5" width="25" height="25" rx="2.5" stroke="#0B5D7A" stroke-width="2" />
+						<path d="M8 14.2L12.2 18.2L20 9.8" stroke="#0B5D7A" stroke-width="2.2" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+				</span>
+
+				<p class="results-note__text">
+					Ці цифри — про довіру, якість навчання і реальні зміни в житті наших студентів.
+				</p>
+			</div>
+
+		</div>
+	</section>
+
+
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+
+				<!-- TOP -->
+				<div class="footer__top">
+
+					<!-- Logo / Brand -->
+					<div class="footer_box">
+						<div class="footer__col footer__col--brand">
+							<a class="footer__brand" href="/" aria-label="Школа масажу Світлани Ретьман">
+								<!-- replace with <img> or inline svg -->
+								<img class="footer__brand-img" src="./assets/img/footer-logo.svg"
+									alt="Школа масажу — Світлани Ретьман">
+							</a>
+						</div>
+
+						<!-- Navigation -->
+						<nav class="footer__col footer__col--nav" aria-label="Навігація">
+							<h3 class="footer__title">Навігація</h3>
+
+							<ul class="footer__list">
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="courses.html">Курси</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="schedule.html">Розклад</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="shop.html">Магазин</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="aboutSchool.html">Про
+										школу</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="contacts.html">Контакти</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Popular courses -->
+					<div class="footer__col footer__col--courses">
+						<h3 class="footer__title">Популярні курси</h3>
+
+						<ul class="footer__list">
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Авторський масаж обличчя</a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center" href="#">Базові
+									принципи <p>мануальної терапії</p></a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Вісцеральний масаж</a></li>
+						</ul>
+					</div>
+
+					<!-- Contacts -->
+					<div class="footer__col footer__col--contacts">
+						<h3 class="footer__title footer__title--contacts">Контакти</h3>
+						<h3 class="footer__title footer__title--mobile-only">Контакти</h3>
+
+						<div class="footer__contacts">
+							<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+								+38 (097) 169-57-14 (Світлана
+								<p>Ретьман)</p>
+							</a>
+
+							<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+								target="_blank">
+								Адреса Школи: м.Київ, вул. Джона
+								<p>Маккейна 13/2</p>
+							</a>
+
+							<div class="footer__socials" aria-label="Соціальні мережі">
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Viber">
+									<!-- icon -->
+									<img class="footer__social-icon" src="./assets/img/viber_icon.svg" alt="viber_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+									<img class="footer__social-icon" src="./assets/img/tiktok_icon.svg" alt="tiktok_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Telegram">
+									<img class="footer__social-icon" src="./assets/img/telegram-Icon.svg" alt="telegram_icon">
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /TOP -->
+
+				<div class="footer__divider" role="presentation"></div>
+
+				<!-- BOTTOM -->
+				<div class="footer__bottom">
+					<ul class="footer__bottom-links">
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Публічна оферта</a>
+						</li>
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Політика конфіденційності</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /BOTTOM -->
+
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/jquery.maskedinput.js"></script>
+	<script src="./js/jquery.validate.min.js"></script>
+	<script src="./js/script.js"></script>
+
+</body>
+
+</html>
