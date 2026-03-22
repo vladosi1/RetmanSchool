@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+		rel="stylesheet">
+
+	<link rel="shortcut icon" href="./assets/img/Logo.svg" type="image/x-icon" sizes="32x32">
+
+	<!-- libs -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+	<!-- Reset + Main -->
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/style.css">
+
+	<title>Retman School</title>
+</head>
+
+<body>
+
+	<header class="header" id="header">
+		<div class="container">
+			<nav class="nav_desktop">
+				<ul>
+					<li><a href="index.html"><img src="./assets/img/home_img.svg" class="home_img" alt="home_img"></a></li>
+					<li><a class="hover-underline-animation-center" href="courses.html">Курси</a></li>
+					<li><a class="hover-underline-animation-center" href="schedule.html">Розклад</a></li>
+					<li><a class="hover-underline-animation-center" href="shop.html">Магазин</a></li>
+					<li><a class="hover-underline-animation-center" href="aboutSchool.html">Про школу</a></li>
+					<li><a class="hover-underline-animation-center" href="contacts.html">Контакти</a></li>
+					<li class="tel hover-underline-animation-center"><a id="tel" href="tel:+380971695714">+38 (097)
+							169-57-14</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- MOBILE HEADER -->
+		<div class="nav_mobile">
+			<button class="burger" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu"
+				aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+
+			<a class="nav_mobile__logo" href="index.html" aria-label="Головна">
+				<img src="./assets/img/Logo.svg" alt="Школа масажу" onerror="this.style.display='none'">
+				<span style="font-weight:700; display:none;">LOGO</span>
+			</a>
+
+			<a class="nav_mobile__phone" href="tel:+380971695714" aria-label="Подзвонити">
+				<img src="./assets/img/tel.svg" alt="tel">
+			</a>
+		</div>
+
+		<!-- Mobile drawer + overlay -->
+		<div class="overlay" id="menuOverlay" hidden></div>
+
+		<aside class="drawer" id="mobileMenu" aria-hidden="true">
+			<div class="drawer__top">
+				<a class="drawer__home" href="index.html" aria-label="Головна">
+					<img src="./assets/img/Logo.svg" alt="" onerror="this.style.display='none'">
+				</a>
+				<button class="drawer__close" type="button" aria-label="Закрити меню">×</button>
+			</div>
+
+			<nav class="drawer__nav">
+				<ul>
+					<li><a href="courses.html">Курси</a></li>
+					<li><a href="schedule.html">Розклад</a></li>
+					<li><a href="shop.html">Магазин</a></li>
+					<li><a href="aboutSchool.html">Про школу</a></li>
+					<li><a href="contacts.html">Контакти</a></li>
+				</ul>
+			</nav>
+
+			<div class="drawer__bottom drawer__bottom--contacts">
+				<div class="footer__col footer__col--contacts">
+					<h3 class="footer__title">Контакти</h3>
+
+					<div class="footer__contacts">
+						<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+							+38 (097) 169-57-14
+							<span>Світлана Ретьман</span>
+						</a>
+
+						<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+							target="_blank">
+							Адреса школи:
+							<span>м. Київ, вул. Джона Маккейна 13/2</span>
+						</a>
+
+						<div class="footer__socials">
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/viber_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/tiktok_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/Telegram-Icon.svg" alt="Telegram">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</aside>
+	</header>
+
+
+
+	<section class="course-single" id="course-single">
+		<div class="container">
+
+			<!-- breadcrumbs -->
+			<nav class="breadcrumbs course-single__breadcrumbs" aria-label="Breadcrumb">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="/">Головна</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="courses.html">Курси</a>
+					</li>
+					<li class="breadcrumbs__item" aria-current="page">
+						<span>“Міофасциальний масаж”</span>
+					</li>
+				</ol>
+			</nav>
+
+			<!-- hero -->
+			<div class="course-single__hero course-hero">
+				<div class="course-hero__media">
+					<img src="./assets/img/offline-myofascial-massage-main-img.png" alt="“Міофасциальний масаж тіла та обличчя”" loading="lazy">
+				</div>
+
+				<div class="course-hero__content">
+					<div class="course-hero__head-box">
+						<div class="course-hero__head">
+							<h1 class="course-hero__title">“Міофасциальний масаж”</h1>
+
+							<div class="course-hero__format" aria-label="Формат курсу">
+								<span class="course-hero__format-icon" aria-hidden="true">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 2.24999C8.27344 2.24999 5.25 5.12765 5.25 8.67187C5.25 12.75 9.75 19.2126 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67187C18.75 5.12765 15.7266 2.24999 12 2.24999Z"
+											stroke="#181A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										<path
+											d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 8.99999C14.25 7.75735 13.2426 6.74999 12 6.74999C10.7574 6.74999 9.75 7.75735 9.75 8.99999C9.75 10.2426 10.7574 11.25 12 11.25Z"
+											stroke="#181A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+
+								</span>
+								<span class="course-hero__format-text">Офлайн</span>
+							</div>
+						</div>
+
+
+						<div class="course-hero__description">
+							<p>
+								Методика, яка використовує техніку масажу “по сухому” з впливом на фасції. Завдяки комплексній роботі з тілом ми впливаємо не лише на м’язову напругу й поставу, а й на стан обличчя.
+							</p>
+						</div>
+					</div>
+
+					<div class="course-hero__meta">
+						<div class="course-hero__meta-item">
+							<span class="course-hero__meta-icon" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 6.75V12L15.75 15.75" stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" />
+									<path
+										d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+										stroke="#181A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="course-hero__meta-text">2 дні</span>
+						</div>
+
+						<div class="course-hero__meta-item">
+							<span class="course-hero__meta-icon" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M8.24992 21.75H15.7499M11.9999 21.75V15.75M17.9999 10.5C17.9999 8.12625 17.9962 4.18922 17.9943 3C17.9943 2.80109 17.9153 2.61032 17.7746 2.46967C17.634 2.32902 17.4432 2.25 17.2443 2.25L6.75414 2.26219C6.55563 2.26219 6.36522 2.34088 6.22464 2.48103C6.08405 2.62117 6.00476 2.81134 6.00414 3.00984C6.00414 4.44328 5.99805 9.06469 5.99805 10.5C5.99805 13.5131 9.88867 15.75 11.998 15.75C14.1074 15.75 17.9999 13.5131 17.9999 10.5Z"
+										stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path
+										d="M6 4.5H2.25V5.25C2.25 7.83844 3.82266 10.5 6 10.5M18 4.5H21.75V5.25C21.75 7.83844 20.1773 10.5 18 10.5"
+										stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+
+							</span>
+							<span class="course-hero__meta-text">Більше 50 випускників</span>
+						</div>
+					</div>
+
+					<ul class="course-hero__advantages" role="list">
+						<li class="course-hero__advantage">
+							<span class="course-hero__advantage-icon" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+										stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+									<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="course-hero__advantage-text">робота “по сухому”</span>
+						</li>
+
+						<li class="course-hero__advantage">
+							<span class="course-hero__advantage-icon" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+										stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+									<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="course-hero__advantage-text">глибокі техніки</span>
+						</li>
+
+						<li class="course-hero__advantage">
+							<span class="course-hero__advantage-icon" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+										stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+									<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="course-hero__advantage-text">ліфтинг без інʼєкцій</span>
+						</li>
+					</ul>
+
+					<a href="#" class="course-hero__button btn btn--primary js-course-popup-trigger"
+						data-course-id="offline-myofascial-massage" data-course-name="Міофасциальний масаж тіла та обличчя"
+						data-course-format="Офлайн">
+						<span>Записатись на курс</span>
+						<span class="course-hero__button-icon" aria-hidden="true">
+							<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+									stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square" />
+							</svg>
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<!-- for who -->
+			<section class="course-audience">
+				<div class="course-audience__inner">
+					<div class="course-audience__top">
+						<h2 class="course-audience__title">Для кого підходить?</h2>
+						<p class="course-audience__subtitle">Курс розроблений для широкої аудиторії</p>
+					</div>
+
+					<ul class="course-audience__list" role="list">
+						<li class="course-audience__item">
+							<span class="course-audience__item-icon" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+										stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+									<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="course-audience__item-text">Для учнів, які володіють першим рівнем технік “Авторський масаж обличчя”</span>
+						</li>
+
+						<li class="course-audience__item">
+							<span class="course-audience__item-icon" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+										stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+									<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="course-audience__item-text">
+								Для початківців у сфері масажу
+							</span>
+						</li>
+
+						<li class="course-audience__item">
+							<span class="course-audience__item-icon" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+										stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+									<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span class="course-audience__item-text">Для майстрів з досвідом</span>
+						</li>
+					</ul>
+
+					<div class="course-audience__note">
+						<p>Медична освіта не є обов'язковою</p>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+	</section>
+	<!-- program -->
+	<section class="course-program">
+		<div class="container">
+			<div class="course-program__inner">
+				<div class="course-program__top">
+					<h2 class="course-program__title">Програма курсу</h2>
+	
+					<div class="course-program__badge">
+						<span class="course-program__badge-text">2 дні</span>
+					</div>
+				</div>
+	
+				<ul class="course-program__list" role="list">
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Міоструктурні техніки (зняття гіпертонусу м’язів методом їх розтяжіння)</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Міофасціальні техніки (робота з фасціями)</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Акцентована робота на проблемних зонах</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Ліфтинг масаж</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Букальний (інтраоральний)</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Робота з передньою та задньою фасцією всього тіла</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Тазовий блок та діафрагма, міжреберна зона</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Грудина, плечові суглоби</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Шийно-комірцева зона (акцент на розтягнення, витяжіння та робота з тригерними точками)</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Робота з драбинчастими м., ГКС, м. підіймач лопатки, платизма</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Під’язична кісточка</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Жувальний м., розпущення «залипання» шкіри</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Акцентована робота з вухом</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Робота на зняття гіпертонусу м’язів обличчя</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Остеопатичні прийоми з шиєю та обличчям</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Робота зі шкірою обличчя, шиї та декольте по сухому!</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Ліфтинговий масаж</span>
+					</li>
+	
+					<li class="course-program__item">
+						<span class="course-program__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-program__item-text">Букальний (інтраоральний) масаж: по «сухому», діафрагма дна рота, крилоподібний м’яз, жувальний м’яз</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- learn -->
+	<section class="course-learn">
+		<div class="container">
+			<div class="course-learn__inner">
+				<div class="course-learn__top">
+					<h2 class="course-learn__title">Ви навчитесь робити</h2>
+					<p class="course-learn__subtitle">Курс розроблений під офлайн навчання</p>
+				</div>
+
+				<ul class="course-learn__list" role="list">
+			
+
+					<li class="course-learn__item">
+						<span class="course-learn__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-learn__item-text">Міофасциальний масаж тіла (робота з фасціями)</span>
+					</li>
+
+					<li class="course-learn__item">
+						<span class="course-learn__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-learn__item-text">Міофасциальний масаж обличчя (без масла і крему)</span>
+					</li>
+
+					<li class="course-learn__item">
+						<span class="course-learn__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="course-learn__item-text">Ліфтинг масаж</span>
+					</li>
+
+		
+				</ul>
+
+				<div class="course-learn__note">
+					<p>Практикуємо один на одному, щоб відчути всі техніки на собі</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- teacher -->
+	<section class="course-teacher">
+		<div class="container">
+			<h2 class="course-teacher__section-title">Викладач курсу</h2>
+
+			<div class="course-teacher__inner">
+				<div class="course-teacher__grid">
+					<div class="course-teacher__content">
+						<div class="course-teacher__person">
+							<span class="course-teacher__person-icon" aria-hidden="true">
+								<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="42" height="42" rx="10" fill="#1ABEEF" />
+									<path
+										d="M25.1245 15.75C24.9408 18.2283 23.062 20.25 20.9995 20.25C18.937 20.25 17.055 18.2288 16.8745 15.75C16.687 13.1719 18.5152 11.25 20.9995 11.25C23.4839 11.25 25.312 13.2188 25.1245 15.75Z"
+										stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<path
+										d="M21.0001 23.25C16.922 23.25 12.7829 25.5 12.017 29.7469C11.9246 30.2588 12.2143 30.75 12.7501 30.75H29.2501C29.7864 30.75 30.0761 30.2588 29.9837 29.7469C29.2173 25.5 25.0782 23.25 21.0001 23.25Z"
+										stroke="black" stroke-width="2" stroke-miterlimit="10" />
+								</svg>
+
+							</span>
+
+							<h3 class="course-teacher__name">Світлана Ретьман</h3>
+						</div>
+
+						<div class="course-teacher__media">
+							<img src="./assets/img/sviper_SR-mobile.png" alt="Світлана Ретьман" loading="lazy">
+						</div>
+
+						<ul class="course-teacher__list" role="list">
+							<li class="course-teacher__item">
+								<span class="course-teacher__item-icon" aria-hidden="true">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+											stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+										<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span class="course-teacher__item-text">Понад 12 років практичного досвіду у сфері масажу</span>
+							</li>
+
+							<li class="course-teacher__item">
+								<span class="course-teacher__item-icon" aria-hidden="true">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+											stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+										<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span class="course-teacher__item-text">Пройшла десятки професійних навчань</span>
+							</li>
+
+							<li class="course-teacher__item">
+								<span class="course-teacher__item-icon" aria-hidden="true">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+											stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+										<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span class="course-teacher__item-text">Провела понад 20 000 сеансів</span>
+							</li>
+
+							<li class="course-teacher__item">
+								<span class="course-teacher__item-icon" aria-hidden="true">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+											stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+										<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<span class="course-teacher__item-text">Підготувала більше 600 учнів</span>
+							</li>
+						</ul>
+
+						<div class="course-teacher__text">
+							<p>Свій досвід, знання та авторські методики передає поєднуючи практику, системність і реальні
+								результати.</p>
+						</div>
+					</div>
+
+					<div class="course-teacher__aside">
+						<img src="./assets/img/teachers_teacher-1.jpg" alt="Світлана Ретьман" loading="lazy">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- results -->
+	<section class="course-results">
+		<div class="container">
+			<h2 class="course-results__section-title">Що ви отримаєте після курсу?</h2>
+
+			<div class="course-results__inner">
+				<div class="course-results__list" role="list">
+					<div class="course-results__item" role="listitem">
+						<span class="course-results__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+
+						<div class="course-results__item-content">
+							<h3 class="course-results__item-title">Методичка</h3>
+							<p class="course-results__item-text">фото та відео матеріал з навчання</p>
+						</div>
+					</div>
+
+					<div class="course-results__item" role="listitem">
+						<span class="course-results__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+
+						<div class="course-results__item-content">
+							<h3 class="course-results__item-title">Сертифікат</h3>
+							<p class="course-results__item-text">На українській та англійській мовах</p>
+						</div>
+					</div>
+
+					<div class="course-results__item" role="listitem">
+						<span class="course-results__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+
+						<div class="course-results__item-content">
+							<h3 class="course-results__item-title">Підтримка</h3>
+							<p class="course-results__item-text">Підтримка після навчання</p>
+						</div>
+					</div>
+				</div>
+
+				<a href="#" class="course-results__button btn btn--primary js-course-popup-trigger"
+					data-course-id="offline-myofascial-massage" data-course-name="Міофасциальний масаж тіла та обличчя"
+					data-course-format="Офлайн">
+					<span>Записатись на курси зараз</span>
+					<span class="course-results__button-icon" aria-hidden="true">
+						<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125" stroke="#F9F9F9"
+								stroke-width="3" stroke-miterlimit="10" stroke-linecap="square" />
+						</svg>
+					</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- details -->
+	<section class="course-details">
+		<div class="container">
+			<h2 class="course-details__section-title">Деталі навчання</h2>
+
+			<div class="course-details__inner">
+				<ul class="course-details__list" role="list">
+					<li class="course-details__item">
+						<span class="course-details__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<div class="course-details__item-box">
+							<span class="course-details__item-text">Дати навчання: 9-11 березня</span>
+						</div>
+					</li>
+
+					<li class="course-details__item">
+						<span class="course-details__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<div class="course-details__item-box">
+							<span class="course-details__item-text">Тривалість: 3 дні, з 10:00 до 17:00</span>
+						</div>
+					</li>
+
+					<li class="course-details__item">
+						<span class="course-details__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<div class="course-details__item-box">
+							<span class="course-details__item-text">Кількість учнів: до 16</span>
+						</div>
+					</li>
+
+					<li class="course-details__item">
+						<span class="course-details__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<div class="course-details__item-box">
+							<span class="course-details__item-text">Вартість: 14 000 грн (бронь місця по передоплаті 3000 грн,
+								входить у вартість).</span>
+						</div>
+					</li>
+
+					<li class="course-details__item">
+						<span class="course-details__item-icon" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+									stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+								<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<div class="course-details__item-box">
+							<span class="course-details__item-text">Локація: м.Київ, вул.Джона Маккейна 13/2</span>
+						</div>
+					</li>
+				</ul>
+
+				<div class="course-details__note-box">
+					<div class="course-details__note">
+						<p>Доступна оплата частинами від Монобанк до 6 місяців без відсотків</p>
+					</div>
+
+					<a href="#" class="course-details__button btn btn--primary js-course-popup-trigger"
+						data-course-id="offline-myofascial-massage" data-course-name="Міофасциальний масаж тіла та обличчя"
+						data-course-format="Офлайн">
+						<span>Записатись</span>
+						<span class="course-details__button-icon" aria-hidden="true">
+							<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+									stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square" />
+							</svg>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="course-reviews">
+		<div class="container">
+			<div class="course-reviews__head">
+				<h2 class="course-reviews__title">Галерея</h2>
+			</div>
+
+			<div class="course-reviews__slider swiper">
+				<div class="swiper-wrapper">
+
+					<!-- slide 1 -->
+					<div class="course-reviews__slide swiper-slide">
+						<div class="course-reviews__card">
+							<img src="./assets/img/course-reviews-slider1.png" alt="Відгук про курс Авторський масаж обличчя 1"
+								loading="lazy">
+						</div>
+					</div>
+
+					<!-- slide 2 -->
+					<div class="course-reviews__slide swiper-slide">
+						<div class="course-reviews__card">
+							<img src="./assets/img/course-reviews-slider2.png" alt="Відгук про курс Авторський масаж обличчя 2"
+								loading="lazy">
+						</div>
+					</div>
+
+					<!-- slide 3 -->
+					<div class="course-reviews__slide swiper-slide">
+						<div class="course-reviews__card">
+							<img src="./assets/img/course-reviews-slider3.png" alt="Відгук про курс Авторський масаж обличчя 3"
+								loading="lazy">
+						</div>
+					</div>
+					<!-- slide 1 -->
+					<div class="course-reviews__slide swiper-slide">
+						<div class="course-reviews__card">
+							<img src="./assets/img/course-reviews-slider1.png" alt="Відгук про курс Авторський масаж обличчя 1"
+								loading="lazy">
+						</div>
+					</div>
+
+					<!-- slide 2 -->
+					<div class="course-reviews__slide swiper-slide">
+						<div class="course-reviews__card">
+							<img src="./assets/img/course-reviews-slider2.png" alt="Відгук про курс Авторський масаж обличчя 2"
+								loading="lazy">
+						</div>
+					</div>
+
+					<!-- slide 3 -->
+					<div class="course-reviews__slide swiper-slide">
+						<div class="course-reviews__card">
+							<img src="./assets/img/course-reviews-slider3.png" alt="Відгук про курс Авторський масаж обличчя 3"
+								loading="lazy">
+						</div>
+					</div>
+
+
+
+
+				</div>
+
+				<div class="course-reviews__bottom">
+					<div class="course-reviews__pagination swiper-pagination"></div>
+
+					<div class="course-reviews__nav" aria-label="Навігація слайдера">
+						<button class="course-reviews__btn course-reviews__btn--prev" type="button"
+							aria-label="Попередній слайд">
+							<img src="./assets/img/popular__arrow--prev.svg" alt="">
+						</button>
+
+						<button class="course-reviews__btn course-reviews__btn--next" type="button"
+							aria-label="Наступний слайд">
+							<img src="./assets/img/popular__arrow--next.svg" alt="">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="course-qa">
+		<div class="container">
+			<div class="course-qa__wrapper">
+
+				<!-- LEFT SIDE -->
+				<div class="course-qa__aside">
+					<div class="course-qa__badge" aria-hidden="true">
+						<img src="./assets/img/qa.svg" alt="Q and A">
+					</div>
+				</div>
+
+				<!-- RIGHT SIDE -->
+				<div class="course-qa__content">
+					<div class="accordion course-qa__accordion" id="courseQaAccordion">
+
+						<!-- ITEM 1 -->
+						<div class="accordion-item course-qa__item">
+							<h3 class="accordion-header course-qa__header" id="courseQaHeading1">
+								<button class="accordion-button course-qa__button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#courseQaCollapse1" aria-expanded="true" aria-controls="courseQaCollapse1">
+									<span class="course-qa__question">Який вид масажу я зможу запропонувати клієнтам?</span>
+
+									<span class="course-qa__icon" aria-hidden="true">
+										<svg class="course-qa__icon-plus" width="45" height="45" viewBox="0 0 45 45" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M22.5 9.84375V35.1562M35.1562 22.5H9.84375" stroke="#181A1B"
+												stroke-width="2.53998" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+										<svg class="course-qa__icon-minus" width="45" height="45" viewBox="0 0 45 45" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M35.1562 22.5H9.84375" stroke="#181A1B" stroke-width="2.53998"
+												stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span>
+								</button>
+							</h3>
+
+							<div id="courseQaCollapse1" class="accordion-collapse collapse show course-qa__collapse"
+								aria-labelledby="courseQaHeading1" data-bs-parent="#courseQaAccordion">
+								<div class="accordion-body course-qa__body">
+									Після проходження курсу “Авторський масаж обличчя”, на основі моїх технік ви створите СВІЙ
+									авторський масаж обличчя. Ви матимете розуміння, які техніки в якому випадку потрібно
+									застосовувати, що буде ефективним при різних типах старіння.
+								</div>
+							</div>
+						</div>
+
+						<!-- ITEM 2 -->
+						<div class="accordion-item course-qa__item">
+							<h3 class="accordion-header course-qa__header" id="courseQaHeading2">
+								<button class="accordion-button collapsed course-qa__button" type="button"
+									data-bs-toggle="collapse" data-bs-target="#courseQaCollapse2" aria-expanded="false"
+									aria-controls="courseQaCollapse2">
+									<span class="course-qa__question">Чи точно буде результат від масажу обличчя?</span>
+
+									<span class="course-qa__icon" aria-hidden="true">
+										<svg class="course-qa__icon-plus" width="45" height="45" viewBox="0 0 45 45" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M22.5 9.84375V35.1562M35.1562 22.5H9.84375" stroke="#181A1B"
+												stroke-width="2.53998" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+										<svg class="course-qa__icon-minus" width="45" height="45" viewBox="0 0 45 45" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M35.1562 22.5H9.84375" stroke="#181A1B" stroke-width="2.53998"
+												stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span>
+								</button>
+							</h3>
+
+							<div id="courseQaCollapse2" class="accordion-collapse collapse course-qa__collapse"
+								aria-labelledby="courseQaHeading2" data-bs-parent="#courseQaAccordion">
+								<div class="accordion-body course-qa__body">
+									Вже після першого дня навчання ВСІ учні помітять результат на собі, адже ми практикуємо один
+									на одному та робимо фото до/після. Працюючи моїми техніками ви зможете гарантувати клієнтам
+									результат при проходженні курсу з 10-15 сеансів через день і 1 раз на 2 тижні підтримуючі
+									сеанси.
+								</div>
+							</div>
+						</div>
+
+						<!-- ITEM 3 -->
+						<div class="accordion-item course-qa__item">
+							<h3 class="accordion-header course-qa__header" id="courseQaHeading3">
+								<button class="accordion-button collapsed course-qa__button" type="button"
+									data-bs-toggle="collapse" data-bs-target="#courseQaCollapse3" aria-expanded="false"
+									aria-controls="courseQaCollapse3">
+									<span class="course-qa__question">Чи надається сертифікат після курсу?</span>
+
+									<span class="course-qa__icon" aria-hidden="true">
+										<svg class="course-qa__icon-plus" width="45" height="45" viewBox="0 0 45 45" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M22.5 9.84375V35.1562M35.1562 22.5H9.84375" stroke="#181A1B"
+												stroke-width="2.53998" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+										<svg class="course-qa__icon-minus" width="45" height="45" viewBox="0 0 45 45" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M35.1562 22.5H9.84375" stroke="#181A1B" stroke-width="2.53998"
+												stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span>
+								</button>
+							</h3>
+
+							<div id="courseQaCollapse3" class="accordion-collapse collapse course-qa__collapse"
+								aria-labelledby="courseQaHeading3" data-bs-parent="#courseQaAccordion">
+								<div class="accordion-body course-qa__body">
+									Так, після завершення курсу ви отримаєте сертифікат українською та англійською мовами, з
+									печаткою та підписом.
+								</div>
+							</div>
+						</div>
+
+						<!-- ITEM 4 -->
+						<div class="accordion-item course-qa__item">
+							<h3 class="accordion-header course-qa__header" id="courseQaHeading4">
+								<button class="accordion-button collapsed course-qa__button" type="button"
+									data-bs-toggle="collapse" data-bs-target="#courseQaCollapse4" aria-expanded="false"
+									aria-controls="courseQaCollapse4">
+									<span class="course-qa__question">Як відбувається оплата?</span>
+
+									<span class="course-qa__icon" aria-hidden="true">
+										<svg class="course-qa__icon-plus" width="45" height="45" viewBox="0 0 45 45" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M22.5 9.84375V35.1562M35.1562 22.5H9.84375" stroke="#181A1B"
+												stroke-width="2.53998" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+										<svg class="course-qa__icon-minus" width="45" height="45" viewBox="0 0 45 45" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M35.1562 22.5H9.84375" stroke="#181A1B" stroke-width="2.53998"
+												stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</span>
+								</button>
+							</h3>
+
+							<div id="courseQaCollapse4" class="accordion-collapse collapse course-qa__collapse"
+								aria-labelledby="courseQaHeading4" data-bs-parent="#courseQaAccordion">
+								<div class="accordion-body course-qa__body">
+									Ми пропонуємо 3 варіанти оплати:<br>
+									1. 3000 грн передоплата для бронювання місця і решта в перший день навчання;<br>
+									2. Повна оплата при бронюванні місця;<br>
+									3. Оплата частинами від Монобанк до 6 місяців без відсотків.
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<section class="help contacts-help">
+		<div class="container">
+			<div class="help__content">
+
+				<h2 class="help__title">
+					Залишились запитання?
+				</h2>
+
+				<p class="help__text">
+					Зв'яжіться з нами і ми допоможемо підібрати навчання під ваші потреби!
+				</p>
+
+				<a href="https://t.me/+380971695714" class="help__btn btn btn--primary hvr-float-shadow">
+					<span class="help__btn-text">Ми на зв'язку</span>
+					<span class="help__btn-icon" aria-hidden="true">
+						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+								fill="#0088CC" />
+							<path
+								d="M8.09992 15.7083C12.3949 13.8371 15.2589 12.6034 16.6919 12.0074C20.7834 10.3056 21.6335 10.01 22.1877 10.0001C22.3095 9.99805 22.582 10.0283 22.7586 10.1715C22.9076 10.2924 22.9486 10.4558 22.9683 10.5705C22.9879 10.6851 23.0123 10.9464 22.9929 11.1505C22.7712 13.4801 21.8118 19.1335 21.3237 21.7427C21.1172 22.8468 20.7105 23.217 20.3168 23.2532C19.4613 23.3319 18.8116 22.6878 17.9829 22.1446C16.6862 21.2946 15.9537 20.7654 14.695 19.936C13.2404 18.9774 14.1834 18.4506 15.0124 17.5896C15.2293 17.3643 18.999 13.9355 19.0719 13.6244C19.0811 13.5855 19.0895 13.4405 19.0034 13.3639C18.9172 13.2874 18.7901 13.3136 18.6983 13.3344C18.5683 13.3639 16.4968 14.7331 12.4839 17.4419C11.8959 17.8457 11.3633 18.0424 10.8862 18.0321C10.3601 18.0207 9.34822 17.7346 8.59598 17.4901C7.67333 17.1902 6.94002 17.0316 7.00388 16.5223C7.03714 16.257 7.40248 15.9856 8.09992 15.7083Z"
+								fill="#F9F9F9" />
+						</svg>
+
+					</span>
+				</a>
+
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+
+				<!-- TOP -->
+				<div class="footer__top">
+
+					<!-- Logo / Brand -->
+					<div class="footer_box">
+						<div class="footer__col footer__col--brand">
+							<a class="footer__brand" href="/" aria-label="Школа масажу Світлани Ретьман">
+								<img class="footer__brand-img" src="./assets/img/footer-logo.svg"
+									alt="Школа масажу — Світлани Ретьман">
+							</a>
+						</div>
+
+						<!-- Navigation -->
+						<nav class="footer__col footer__col--nav" aria-label="Навігація">
+							<h3 class="footer__title">Навігація</h3>
+
+							<ul class="footer__list">
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="courses.html">Курси</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="schedule.html">Розклад</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="shop.html">Магазин</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="aboutSchool.html">Про школу</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="contacts.html">Контакти</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Popular courses -->
+					<div class="footer__col footer__col--courses">
+						<h3 class="footer__title">Популярні курси</h3>
+
+						<ul class="footer__list">
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Авторський масаж обличчя</a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center" href="#">Базові
+									принципи <p>мануальної терапії</p></a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Вісцеральний масаж</a></li>
+						</ul>
+					</div>
+
+					<!-- Contacts -->
+					<div class="footer__col footer__col--contacts">
+						<h3 class="footer__title footer__title--contacts">Контакти</h3>
+						<h3 class="footer__title footer__title--mobile-only">Контакти</h3>
+
+						<div class="footer__contacts">
+							<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+								+38 (097) 169-57-14 (Світлана
+								<p>Ретьман)</p>
+							</a>
+
+							<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+								target="_blank">
+								Адреса Школи: м.Київ, вул. Джона
+								<p>Маккейна 13/2</p>
+							</a>
+
+							<div class="footer__socials" aria-label="Соціальні мережі">
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Viber">
+									<img class="footer__social-icon" src="./assets/img/viber_icon.svg" alt="viber_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+									<img class="footer__social-icon" src="./assets/img/tiktok_icon.svg" alt="tiktok_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Telegram">
+									<img class="footer__social-icon" src="./assets/img/Telegram-Icon.svg" alt="telegram_icon">
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /TOP -->
+
+				<div class="footer__divider" role="presentation"></div>
+
+				<!-- BOTTOM -->
+				<div class="footer__bottom">
+					<ul class="footer__bottom-links">
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Публічна оферта</a>
+						</li>
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Політика конфіденційності</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /BOTTOM -->
+
+			</div>
+		</div>
+	</footer>
+	<!-- Universal course popup -->
+	<div class="order-popup course-popup" id="courseSignupPopup" style="display: none;">
+		<div class="order-popup__head">
+			<div class="order-popup__title">Записатись на курс</div>
+			<div class="order-popup__subtitle">
+				Заповніть форму, і ми зв’яжемося з вами для підтвердження запису
+			</div>
+		</div>
+
+		<div class="order-popup__info">
+			<div class="order-popup__product" id="coursePopupTitle">Назва курсу</div>
+			<div class="order-popup__qty">
+				Формат: <span id="coursePopupFormat">—</span>
+			</div>
+		</div>
+
+		<form class="order-popup__form js-course-signup-form" action="#" method="post" novalidate>
+			<input type="hidden" name="course_id" id="coursePopupId" value="">
+			<input type="hidden" name="course_name" id="coursePopupNameField" value="">
+			<input type="hidden" name="course_format" id="coursePopupFormatField" value="">
+			<input type="hidden" name="form_type" value="course_signup">
+
+			<label class="order-popup__field">
+				<span class="order-popup__label">Ім’я та прізвище*</span>
+				<input class="order-popup__input" type="text" name="name" placeholder="Введіть ваше ім’я та прізвище"
+					required>
+			</label>
+
+			<label class="order-popup__field">
+				<span class="order-popup__label">Телефон*</span>
+				<input class="order-popup__input js-phone-input phone" type="tel" name="phone"
+					placeholder="+380 (__) ___-__-__" inputmode="tel" required>
+			</label>
+
+			<label class="order-popup__field">
+				<span class="order-popup__label">Коментар</span>
+				<textarea class="order-popup__textarea" name="comment"
+					placeholder="Ваші побажання або запитання"></textarea>
+			</label>
+
+			<div class="order-popup__response" id="coursePopupResponse" hidden></div>
+
+			<button class="order-popup__submit" type="submit">
+				Підтвердити запис
+			</button>
+		</form>
+	</div>
+	<!-- /Universal course popup -->
+
+
+	<!-- scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+	<script src="./js/main.js"></script>
+	<script src="./js/jquery.maskedinput.js"></script>
+	<script src="./js/jquery.validate.min.js"></script>
+	<script src="./js/script.js"></script>
+
+</body>
+
+</html>

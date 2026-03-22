@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="shortcut icon" href="./assets/img/Logo.svg" type="image/x-icon" sizes="32x32">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+	<title>Retman School</title>
+	<!-- Reset -->
+	<link rel="stylesheet" href="./css/normalize.css">
+	<!-- Main styles -->
+	<link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+	<header class="header" id="header">
+		<div class="container">
+			<nav class="nav_desktop">
+				<ul>
+					<li><a href="index.html"><img src="./assets/img/home_img.svg" class="home_img" alt="home_img"></a></li>
+					<li><a class="hover-underline-animation-center" href="courses.html">Курси</a></li>
+					<li><a class="hover-underline-animation-center" href="schedule.html">Розклад</a></li>
+					<li><a class="hover-underline-animation-center" href="shop.html">Магазин</a></li>
+					<li><a class="hover-underline-animation-center" href="aboutSchool.html">Про школу</a></li>
+					<li><a class="hover-underline-animation-center" href="contacts.html">Контакти</a></li>
+					<li class="tel hover-underline-animation-center"><a id="tel" href="tel:+380971695714">+38 (097)
+							169-57-14</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- MOBILE HEADER -->
+		<div class="nav_mobile">
+			<button class="burger" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu"
+				aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+
+			<a class="nav_mobile__logo" href="index.html" aria-label="Головна">
+				<img src="./assets/img/Logo.svg" alt="Школа масажу" onerror="this.style.display='none'">
+				<span style="font-weight:700; display:none;">LOGO</span>
+			</a>
+
+			<a class="nav_mobile__phone" href="tel:+380971695714" aria-label="Подзвонити">
+				<img src="./assets/img/tel.svg" alt="tel">
+
+			</a>
+		</div>
+
+
+
+
+		<!-- Mobile drawer + overlay -->
+		<div class="overlay" id="menuOverlay" hidden></div>
+
+		<aside class="drawer" id="mobileMenu" aria-hidden="true">
+			<div class="drawer__top">
+				<a class="drawer__home" href="index.html" aria-label="Головна">
+					<img src="./assets/img/Logo.svg" alt="" onerror="this.style.display='none'">
+				</a>
+				<button class="drawer__close" type="button" aria-label="Закрити меню">×</button>
+			</div>
+
+			<nav class="drawer__nav">
+				<ul>
+					<li><a href="courses.html">Курси</a></li>
+					<li><a href="schedule.html">Розклад</a></li>
+					<li><a href="shop.html">Магазин</a></li>
+					<li><a href="aboutSchool.html">Про школу</a></li>
+					<li><a href="contacts.html">Контакти</a></li>
+				</ul>
+
+			</nav>
+
+			<div class="drawer__bottom drawer__bottom--contacts">
+				<div class="footer__col footer__col--contacts">
+					<h3 class="footer__title">Контакти</h3>
+
+					<div class="footer__contacts">
+
+						<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+							+38 (097) 169-57-14
+							<span>Світлана Ретьман</span>
+						</a>
+
+						<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+							target="_blank">
+							Адреса школи:
+							<span>м. Київ, вул. Джона Маккейна 13/2</span>
+						</a>
+
+						<div class="footer__socials">
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/viber_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/tiktok_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/Telegram-Icon.svg" alt="Telegram">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</aside>
+	</header>
+
+
+	<main class="schedule-page" id="schedule">
+
+		<!-- Breadcrumbs (static now, later WP breadcrumbs) -->
+		<div class="schedule-page__breadcrumbs" aria-label="Breadcrumb">
+			<div class="container">
+				<nav class="breadcrumbs breadcrumbs-schedule">
+					<a class="breadcrumbs__link" href="index.html">Головна</a>
+					<span class="breadcrumbs__sep">—</span>
+					<span class="breadcrumbs__current" aria-current="page">Розклад</span>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Hero -->
+		<section class="schedule-hero" aria-labelledby="scheduleTitle">
+			<div class="container schedule-hero__container">
+				<header class="schedule-hero__head">
+					<h1 class="schedule-hero__title" id="scheduleTitle">Розклад подій</h1>
+					<p class="schedule-hero__subtitle">
+						Оберіть курс або майстер-клас та запишіться прямо зараз
+					</p>
+				</header>
+
+				<!-- Tabs -->
+				<div class="schedule-tabs" data-schedule-tabs>
+					<!-- Bootstrap nav-pills (you can keep bootstrap classes) -->
+					<ul class="nav nav-pills schedule-tabs__nav" id="scheduleTabs" role="tablist">
+						<!-- item -->
+						<li class="nav-item schedule-tabs__item" role="presentation">
+							<button class="nav-link active schedule-tabs__btn" id="tab-feb" data-bs-toggle="pill"
+								data-bs-target="#pane-feb" type="button" role="tab" aria-controls="pane-feb"
+								aria-selected="true">
+								<span class="schedule-tabs__month">Квітень</span>
+								<span class="schedule-tabs__count">3 події</span>
+							</button>
+						</li>
+
+						<li class="nav-item schedule-tabs__item" role="presentation">
+							<button class="nav-link schedule-tabs__btn" id="tab-mar" data-bs-toggle="pill"
+								data-bs-target="#pane-mar" type="button" role="tab" aria-controls="pane-mar"
+								aria-selected="false">
+								<span class="schedule-tabs__month">Травень</span>
+								<span class="schedule-tabs__count">7 подій</span>
+							</button>
+						</li>
+
+						<li class="nav-item schedule-tabs__item" role="presentation">
+							<button class="nav-link schedule-tabs__btn" id="tab-apr" data-bs-toggle="pill"
+								data-bs-target="#pane-apr" type="button" role="tab" aria-controls="pane-apr"
+								aria-selected="false">
+								<span class="schedule-tabs__month">Червень</span>
+								<span class="schedule-tabs__count">2 події</span>
+							</button>
+						</li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content schedule-tabs__content" id="scheduleTabsContent">
+						<!-- ================= FEB ================= -->
+						<div class="tab-pane fade show active schedule-pane" id="pane-feb" role="tabpanel"
+							aria-labelledby="tab-feb" tabindex="0">
+							<!-- Cards grid -->
+							<div class="schedule-grid" role="list">
+								<!-- CARD -->
+								<article class="event-card" role="listitem" data-event-card>
+									<div class="event-card__top">
+										<!-- meta left -->
+										<div class="event-card__meta">
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M19.5 3.74999H4.5C3.25736 3.74999 2.25 4.75735 2.25 5.99999V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H19.5C20.7426 21.75 21.75 20.7426 21.75 19.5V5.99999C21.75 4.75735 20.7426 3.74999 19.5 3.74999Z"
+															stroke="#828282" stroke-width="2" stroke-linejoin="round" />
+														<path
+															d="M13.875 12C14.4963 12 15 11.4963 15 10.875C15 10.2537 14.4963 9.75 13.875 9.75C13.2537 9.75 12.75 10.2537 12.75 10.875C12.75 11.4963 13.2537 12 13.875 12Z"
+															fill="#828282" />
+														<path
+															d="M17.625 12C18.2463 12 18.75 11.4963 18.75 10.875C18.75 10.2537 18.2463 9.75 17.625 9.75C17.0037 9.75 16.5 10.2537 16.5 10.875C16.5 11.4963 17.0037 12 17.625 12Z"
+															fill="#828282" />
+														<path
+															d="M13.875 15.75C14.4963 15.75 15 15.2463 15 14.625C15 14.0037 14.4963 13.5 13.875 13.5C13.2537 13.5 12.75 14.0037 12.75 14.625C12.75 15.2463 13.2537 15.75 13.875 15.75Z"
+															fill="#828282" />
+														<path
+															d="M17.625 15.75C18.2463 15.75 18.75 15.2463 18.75 14.625C18.75 14.0037 18.2463 13.5 17.625 13.5C17.0037 13.5 16.5 14.0037 16.5 14.625C16.5 15.2463 17.0037 15.75 17.625 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 15.75C6.99632 15.75 7.5 15.2463 7.5 14.625C7.5 14.0037 6.99632 13.5 6.375 13.5C5.75368 13.5 5.25 14.0037 5.25 14.625C5.25 15.2463 5.75368 15.75 6.375 15.75Z"
+															fill="#828282" />
+														<path
+															d="M10.125 15.75C10.7463 15.75 11.25 15.2463 11.25 14.625C11.25 14.0037 10.7463 13.5 10.125 13.5C9.50368 13.5 9 14.0037 9 14.625C9 15.2463 9.50368 15.75 10.125 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 19.5C6.99632 19.5 7.5 18.9963 7.5 18.375C7.5 17.7537 6.99632 17.25 6.375 17.25C5.75368 17.25 5.25 17.7537 5.25 18.375C5.25 18.9963 5.75368 19.5 6.375 19.5Z"
+															fill="#828282" />
+														<path
+															d="M10.125 19.5C10.7463 19.5 11.25 18.9963 11.25 18.375C11.25 17.7537 10.7463 17.25 10.125 17.25C9.50368 17.25 9 17.7537 9 18.375C9 18.9963 9.50368 19.5 10.125 19.5Z"
+															fill="#828282" />
+														<path
+															d="M13.875 19.5C14.4963 19.5 15 18.9963 15 18.375C15 17.7537 14.4963 17.25 13.875 17.25C13.2537 17.25 12.75 17.7537 12.75 18.375C12.75 18.9963 13.2537 19.5 13.875 19.5Z"
+															fill="#828282" />
+														<path d="M6 2.24999V3.74999M18 2.24999V3.74999" stroke="#828282"
+															stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M21.75 7.5H2.25" stroke="#828282" stroke-width="2"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">16-20 лютого</span>
+											</div>
+
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M12 2.99999C7.03125 2.99999 3 7.03124 3 12C3 16.9687 7.03125 21 12 21C16.9688 21 21 16.9687 21 12C21 7.03124 16.9688 2.99999 12 2.99999Z"
+															stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+														<path d="M12 6V12.75H16.5" stroke="#828282" stroke-width="2"
+															stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+
+												</span>
+												<span class="event-card__meta-text">10:00</span>
+											</div>
+										</div>
+
+										<!-- badge right -->
+										<div class="event-card__badge event-card__badge--offline">
+											<span class="event-card__badge-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+
+											</span>
+											Офлайн
+										</div>
+									</div>
+
+									<h3 class="event-card__title">Базовий курс масажу</h3>
+
+									<div class="event-card__details">
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">м.Київ, вул. Джона Маккейна , 13/2</span>
+										</div>
+
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M16.125 6.75C15.9413 9.22828 14.0625 11.25 12 11.25C9.93754 11.25 8.05551 9.22875 7.87504 6.75C7.68754 4.17188 9.51566 2.25 12 2.25C14.4844 2.25 16.3125 4.21875 16.125 6.75Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12.0001 14.25C7.92199 14.25 3.78293 16.5 3.01699 20.7469C2.92465 21.2588 3.21433 21.75 3.75011 21.75H20.2501C20.7864 21.75 21.0761 21.2588 20.9837 20.7469C20.2173 16.5 16.0782 14.25 12.0001 14.25Z"
+														stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+												</svg>
+
+											</span>
+											<span class="event-card__detail-text">Світлани Ретьман</span>
+										</div>
+									</div>
+
+									<div class="event-card__actions">
+										<!-- Записатися (opens modal) -->
+										<button class="btn btn-primary event-card__btn event-card__btn--signup" type="button"
+											data-bs-toggle="modal" data-bs-target="#signupModal"
+											data-event-title="Базовий курс масажу" data-event-date="16-20 лютого"
+											data-event-time="10:00" data-event-format="Офлайн"
+											data-event-place="м.Київ, вул. Джона Маккейна , 13/2"
+											data-event-teacher="Світлани Ретьман">
+											Записатись
+											<span class="event-card__btn-arrow" aria-hidden="true"><svg width="36" height="36"
+													viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+														stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10"
+														stroke-linecap="square" />
+												</svg></span>
+										</button>
+
+										<!-- Детальніше -->
+										<a class="btn btn-outline event-card__btn event-card__btn--more" href="#">
+											Детальніше
+										</a>
+									</div>
+								</article>
+
+								<!-- CARD 2 (example) -->
+								<article class="event-card" role="listitem" data-event-card>
+									<div class="event-card__top">
+										<div class="event-card__meta">
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M19.5 3.74999H4.5C3.25736 3.74999 2.25 4.75735 2.25 5.99999V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H19.5C20.7426 21.75 21.75 20.7426 21.75 19.5V5.99999C21.75 4.75735 20.7426 3.74999 19.5 3.74999Z"
+															stroke="#828282" stroke-width="2" stroke-linejoin="round" />
+														<path
+															d="M13.875 12C14.4963 12 15 11.4963 15 10.875C15 10.2537 14.4963 9.75 13.875 9.75C13.2537 9.75 12.75 10.2537 12.75 10.875C12.75 11.4963 13.2537 12 13.875 12Z"
+															fill="#828282" />
+														<path
+															d="M17.625 12C18.2463 12 18.75 11.4963 18.75 10.875C18.75 10.2537 18.2463 9.75 17.625 9.75C17.0037 9.75 16.5 10.2537 16.5 10.875C16.5 11.4963 17.0037 12 17.625 12Z"
+															fill="#828282" />
+														<path
+															d="M13.875 15.75C14.4963 15.75 15 15.2463 15 14.625C15 14.0037 14.4963 13.5 13.875 13.5C13.2537 13.5 12.75 14.0037 12.75 14.625C12.75 15.2463 13.2537 15.75 13.875 15.75Z"
+															fill="#828282" />
+														<path
+															d="M17.625 15.75C18.2463 15.75 18.75 15.2463 18.75 14.625C18.75 14.0037 18.2463 13.5 17.625 13.5C17.0037 13.5 16.5 14.0037 16.5 14.625C16.5 15.2463 17.0037 15.75 17.625 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 15.75C6.99632 15.75 7.5 15.2463 7.5 14.625C7.5 14.0037 6.99632 13.5 6.375 13.5C5.75368 13.5 5.25 14.0037 5.25 14.625C5.25 15.2463 5.75368 15.75 6.375 15.75Z"
+															fill="#828282" />
+														<path
+															d="M10.125 15.75C10.7463 15.75 11.25 15.2463 11.25 14.625C11.25 14.0037 10.7463 13.5 10.125 13.5C9.50368 13.5 9 14.0037 9 14.625C9 15.2463 9.50368 15.75 10.125 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 19.5C6.99632 19.5 7.5 18.9963 7.5 18.375C7.5 17.7537 6.99632 17.25 6.375 17.25C5.75368 17.25 5.25 17.7537 5.25 18.375C5.25 18.9963 5.75368 19.5 6.375 19.5Z"
+															fill="#828282" />
+														<path
+															d="M10.125 19.5C10.7463 19.5 11.25 18.9963 11.25 18.375C11.25 17.7537 10.7463 17.25 10.125 17.25C9.50368 17.25 9 17.7537 9 18.375C9 18.9963 9.50368 19.5 10.125 19.5Z"
+															fill="#828282" />
+														<path
+															d="M13.875 19.5C14.4963 19.5 15 18.9963 15 18.375C15 17.7537 14.4963 17.25 13.875 17.25C13.2537 17.25 12.75 17.7537 12.75 18.375C12.75 18.9963 13.2537 19.5 13.875 19.5Z"
+															fill="#828282" />
+														<path d="M6 2.24999V3.74999M18 2.24999V3.74999" stroke="#828282"
+															stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M21.75 7.5H2.25" stroke="#828282" stroke-width="2"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">21-22 лютого</span>
+											</div>
+
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+															stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" />
+														<path
+															d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+															stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">10:00</span>
+											</div>
+										</div>
+
+										<div class="event-card__badge event-card__badge--offline">
+											<span class="event-card__badge-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											Офлайн
+										</div>
+									</div>
+
+									<h3 class="event-card__title">Базові принципи мануальної терапії</h3>
+
+									<div class="event-card__details">
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+
+											</span>
+											<span class="event-card__detail-text">м.Київ, вул. Джона Маккейна , 13/2</span>
+										</div>
+
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M16.125 6.75C15.9413 9.22828 14.0625 11.25 12 11.25C9.93754 11.25 8.05551 9.22875 7.87504 6.75C7.68754 4.17188 9.51566 2.25 12 2.25C14.4844 2.25 16.3125 4.21875 16.125 6.75Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12.0001 14.25C7.92199 14.25 3.78293 16.5 3.01699 20.7469C2.92465 21.2588 3.21433 21.75 3.75011 21.75H20.2501C20.7864 21.75 21.0761 21.2588 20.9837 20.7469C20.2173 16.5 16.0782 14.25 12.0001 14.25Z"
+														stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">Андрій Маслій</span>
+										</div>
+									</div>
+
+									<div class="event-card__actions">
+										<button class="btn btn-primary event-card__btn event-card__btn--signup" type="button"
+											data-bs-toggle="modal" data-bs-target="#signupModal"
+											data-event-title="Базові принципи мануальної терапії" data-event-date="21-22 лютого"
+											data-event-time="10:00" data-event-format="Офлайн"
+											data-event-place="м.Київ, вул. Джона Маккейна , 13/2"
+											data-event-teacher="Андрій Маслій">
+											Записатись
+											<span class="event-card__btn-arrow" aria-hidden="true"><svg width="36" height="36"
+													viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+														stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10"
+														stroke-linecap="square" />
+												</svg></span>
+										</button>
+
+										<a class="btn btn-outline event-card__btn event-card__btn--more" href="#">
+											Детальніше
+										</a>
+									</div>
+								</article>
+								<article class="event-card" role="listitem" data-event-card>
+									<div class="event-card__top">
+										<div class="event-card__meta">
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M19.5 3.74999H4.5C3.25736 3.74999 2.25 4.75735 2.25 5.99999V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H19.5C20.7426 21.75 21.75 20.7426 21.75 19.5V5.99999C21.75 4.75735 20.7426 3.74999 19.5 3.74999Z"
+															stroke="#828282" stroke-width="2" stroke-linejoin="round" />
+														<path
+															d="M13.875 12C14.4963 12 15 11.4963 15 10.875C15 10.2537 14.4963 9.75 13.875 9.75C13.2537 9.75 12.75 10.2537 12.75 10.875C12.75 11.4963 13.2537 12 13.875 12Z"
+															fill="#828282" />
+														<path
+															d="M17.625 12C18.2463 12 18.75 11.4963 18.75 10.875C18.75 10.2537 18.2463 9.75 17.625 9.75C17.0037 9.75 16.5 10.2537 16.5 10.875C16.5 11.4963 17.0037 12 17.625 12Z"
+															fill="#828282" />
+														<path
+															d="M13.875 15.75C14.4963 15.75 15 15.2463 15 14.625C15 14.0037 14.4963 13.5 13.875 13.5C13.2537 13.5 12.75 14.0037 12.75 14.625C12.75 15.2463 13.2537 15.75 13.875 15.75Z"
+															fill="#828282" />
+														<path
+															d="M17.625 15.75C18.2463 15.75 18.75 15.2463 18.75 14.625C18.75 14.0037 18.2463 13.5 17.625 13.5C17.0037 13.5 16.5 14.0037 16.5 14.625C16.5 15.2463 17.0037 15.75 17.625 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 15.75C6.99632 15.75 7.5 15.2463 7.5 14.625C7.5 14.0037 6.99632 13.5 6.375 13.5C5.75368 13.5 5.25 14.0037 5.25 14.625C5.25 15.2463 5.75368 15.75 6.375 15.75Z"
+															fill="#828282" />
+														<path
+															d="M10.125 15.75C10.7463 15.75 11.25 15.2463 11.25 14.625C11.25 14.0037 10.7463 13.5 10.125 13.5C9.50368 13.5 9 14.0037 9 14.625C9 15.2463 9.50368 15.75 10.125 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 19.5C6.99632 19.5 7.5 18.9963 7.5 18.375C7.5 17.7537 6.99632 17.25 6.375 17.25C5.75368 17.25 5.25 17.7537 5.25 18.375C5.25 18.9963 5.75368 19.5 6.375 19.5Z"
+															fill="#828282" />
+														<path
+															d="M10.125 19.5C10.7463 19.5 11.25 18.9963 11.25 18.375C11.25 17.7537 10.7463 17.25 10.125 17.25C9.50368 17.25 9 17.7537 9 18.375C9 18.9963 9.50368 19.5 10.125 19.5Z"
+															fill="#828282" />
+														<path
+															d="M13.875 19.5C14.4963 19.5 15 18.9963 15 18.375C15 17.7537 14.4963 17.25 13.875 17.25C13.2537 17.25 12.75 17.7537 12.75 18.375C12.75 18.9963 13.2537 19.5 13.875 19.5Z"
+															fill="#828282" />
+														<path d="M6 2.24999V3.74999M18 2.24999V3.74999" stroke="#828282"
+															stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M21.75 7.5H2.25" stroke="#828282" stroke-width="2"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">21-22 лютого</span>
+											</div>
+
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+															stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" />
+														<path
+															d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+															stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">10:00</span>
+											</div>
+										</div>
+
+										<div class="event-card__badge event-card__badge--offline">
+											<span class="event-card__badge-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											Офлайн
+										</div>
+									</div>
+
+									<h3 class="event-card__title">Базові принципи мануальної терапії</h3>
+
+									<div class="event-card__details">
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+
+											</span>
+											<span class="event-card__detail-text">м.Київ, вул. Джона Маккейна , 13/2</span>
+										</div>
+
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M16.125 6.75C15.9413 9.22828 14.0625 11.25 12 11.25C9.93754 11.25 8.05551 9.22875 7.87504 6.75C7.68754 4.17188 9.51566 2.25 12 2.25C14.4844 2.25 16.3125 4.21875 16.125 6.75Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12.0001 14.25C7.92199 14.25 3.78293 16.5 3.01699 20.7469C2.92465 21.2588 3.21433 21.75 3.75011 21.75H20.2501C20.7864 21.75 21.0761 21.2588 20.9837 20.7469C20.2173 16.5 16.0782 14.25 12.0001 14.25Z"
+														stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">Андрій Маслій</span>
+										</div>
+									</div>
+
+									<div class="event-card__actions">
+										<button class="btn btn-primary event-card__btn event-card__btn--signup" type="button"
+											data-bs-toggle="modal" data-bs-target="#signupModal"
+											data-event-title="Базові принципи мануальної терапії" data-event-date="21-22 лютого"
+											data-event-time="10:00" data-event-format="Офлайн"
+											data-event-place="м.Київ, вул. Джона Маккейна , 13/2"
+											data-event-teacher="Андрій Маслій">
+											Записатись
+											<span class="event-card__btn-arrow" aria-hidden="true"><svg width="36" height="36"
+													viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+														stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10"
+														stroke-linecap="square" />
+												</svg></span>
+										</button>
+
+										<a class="btn btn-outline event-card__btn event-card__btn--more" href="#">
+											Детальніше
+										</a>
+									</div>
+								</article>
+								<article class="event-card" role="listitem" data-event-card>
+									<div class="event-card__top">
+										<!-- meta left -->
+										<div class="event-card__meta">
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M19.5 3.74999H4.5C3.25736 3.74999 2.25 4.75735 2.25 5.99999V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H19.5C20.7426 21.75 21.75 20.7426 21.75 19.5V5.99999C21.75 4.75735 20.7426 3.74999 19.5 3.74999Z"
+															stroke="#828282" stroke-width="2" stroke-linejoin="round" />
+														<path
+															d="M13.875 12C14.4963 12 15 11.4963 15 10.875C15 10.2537 14.4963 9.75 13.875 9.75C13.2537 9.75 12.75 10.2537 12.75 10.875C12.75 11.4963 13.2537 12 13.875 12Z"
+															fill="#828282" />
+														<path
+															d="M17.625 12C18.2463 12 18.75 11.4963 18.75 10.875C18.75 10.2537 18.2463 9.75 17.625 9.75C17.0037 9.75 16.5 10.2537 16.5 10.875C16.5 11.4963 17.0037 12 17.625 12Z"
+															fill="#828282" />
+														<path
+															d="M13.875 15.75C14.4963 15.75 15 15.2463 15 14.625C15 14.0037 14.4963 13.5 13.875 13.5C13.2537 13.5 12.75 14.0037 12.75 14.625C12.75 15.2463 13.2537 15.75 13.875 15.75Z"
+															fill="#828282" />
+														<path
+															d="M17.625 15.75C18.2463 15.75 18.75 15.2463 18.75 14.625C18.75 14.0037 18.2463 13.5 17.625 13.5C17.0037 13.5 16.5 14.0037 16.5 14.625C16.5 15.2463 17.0037 15.75 17.625 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 15.75C6.99632 15.75 7.5 15.2463 7.5 14.625C7.5 14.0037 6.99632 13.5 6.375 13.5C5.75368 13.5 5.25 14.0037 5.25 14.625C5.25 15.2463 5.75368 15.75 6.375 15.75Z"
+															fill="#828282" />
+														<path
+															d="M10.125 15.75C10.7463 15.75 11.25 15.2463 11.25 14.625C11.25 14.0037 10.7463 13.5 10.125 13.5C9.50368 13.5 9 14.0037 9 14.625C9 15.2463 9.50368 15.75 10.125 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 19.5C6.99632 19.5 7.5 18.9963 7.5 18.375C7.5 17.7537 6.99632 17.25 6.375 17.25C5.75368 17.25 5.25 17.7537 5.25 18.375C5.25 18.9963 5.75368 19.5 6.375 19.5Z"
+															fill="#828282" />
+														<path
+															d="M10.125 19.5C10.7463 19.5 11.25 18.9963 11.25 18.375C11.25 17.7537 10.7463 17.25 10.125 17.25C9.50368 17.25 9 17.7537 9 18.375C9 18.9963 9.50368 19.5 10.125 19.5Z"
+															fill="#828282" />
+														<path
+															d="M13.875 19.5C14.4963 19.5 15 18.9963 15 18.375C15 17.7537 14.4963 17.25 13.875 17.25C13.2537 17.25 12.75 17.7537 12.75 18.375C12.75 18.9963 13.2537 19.5 13.875 19.5Z"
+															fill="#828282" />
+														<path d="M6 2.24999V3.74999M18 2.24999V3.74999" stroke="#828282"
+															stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M21.75 7.5H2.25" stroke="#828282" stroke-width="2"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">16-20 лютого</span>
+											</div>
+
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M12 2.99999C7.03125 2.99999 3 7.03124 3 12C3 16.9687 7.03125 21 12 21C16.9688 21 21 16.9687 21 12C21 7.03124 16.9688 2.99999 12 2.99999Z"
+															stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+														<path d="M12 6V12.75H16.5" stroke="#828282" stroke-width="2"
+															stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+
+												</span>
+												<span class="event-card__meta-text">10:00</span>
+											</div>
+										</div>
+
+										<!-- badge right -->
+										<div class="event-card__badge event-card__badge--offline">
+											<span class="event-card__badge-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+
+											</span>
+											Офлайн
+										</div>
+									</div>
+
+									<h3 class="event-card__title">Базовий курс масажу</h3>
+
+									<div class="event-card__details">
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">м.Київ, вул. Джона Маккейна , 13/2</span>
+										</div>
+
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M16.125 6.75C15.9413 9.22828 14.0625 11.25 12 11.25C9.93754 11.25 8.05551 9.22875 7.87504 6.75C7.68754 4.17188 9.51566 2.25 12 2.25C14.4844 2.25 16.3125 4.21875 16.125 6.75Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12.0001 14.25C7.92199 14.25 3.78293 16.5 3.01699 20.7469C2.92465 21.2588 3.21433 21.75 3.75011 21.75H20.2501C20.7864 21.75 21.0761 21.2588 20.9837 20.7469C20.2173 16.5 16.0782 14.25 12.0001 14.25Z"
+														stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+												</svg>
+
+											</span>
+											<span class="event-card__detail-text">Світлани Ретьман</span>
+										</div>
+									</div>
+
+									<div class="event-card__actions">
+										<!-- Записатися (opens modal) -->
+										<button class="btn btn-primary event-card__btn event-card__btn--signup" type="button"
+											data-bs-toggle="modal" data-bs-target="#signupModal"
+											data-event-title="Базовий курс масажу" data-event-date="16-20 лютого"
+											data-event-time="10:00" data-event-format="Офлайн"
+											data-event-place="м.Київ, вул. Джона Маккейна , 13/2"
+											data-event-teacher="Світлани Ретьман">
+											Записатись
+											<span class="event-card__btn-arrow" aria-hidden="true"><svg width="36" height="36"
+													viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+														stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10"
+														stroke-linecap="square" />
+												</svg></span>
+										</button>
+
+										<!-- Детальніше -->
+										<a class="btn btn-outline event-card__btn event-card__btn--more" href="#">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</div>
+						</div>
+
+						<!-- ================= MAR ================= -->
+						<div class="tab-pane fade schedule-pane" id="pane-mar" role="tabpanel" aria-labelledby="tab-mar"
+							tabindex="0">
+							<div class="schedule-grid" role="list">
+								<!-- Repeat event-card items (dynamic in WP) -->
+								<article class="event-card" role="listitem">
+									<div class="event-card__top">
+										<div class="event-card__meta">
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true"><svg width="24" height="24"
+														viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M19.5 3.74999H4.5C3.25736 3.74999 2.25 4.75735 2.25 5.99999V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H19.5C20.7426 21.75 21.75 20.7426 21.75 19.5V5.99999C21.75 4.75735 20.7426 3.74999 19.5 3.74999Z"
+															stroke="#828282" stroke-width="2" stroke-linejoin="round" />
+														<path
+															d="M13.875 12C14.4963 12 15 11.4963 15 10.875C15 10.2537 14.4963 9.75 13.875 9.75C13.2537 9.75 12.75 10.2537 12.75 10.875C12.75 11.4963 13.2537 12 13.875 12Z"
+															fill="#828282" />
+														<path
+															d="M17.625 12C18.2463 12 18.75 11.4963 18.75 10.875C18.75 10.2537 18.2463 9.75 17.625 9.75C17.0037 9.75 16.5 10.2537 16.5 10.875C16.5 11.4963 17.0037 12 17.625 12Z"
+															fill="#828282" />
+														<path
+															d="M13.875 15.75C14.4963 15.75 15 15.2463 15 14.625C15 14.0037 14.4963 13.5 13.875 13.5C13.2537 13.5 12.75 14.0037 12.75 14.625C12.75 15.2463 13.2537 15.75 13.875 15.75Z"
+															fill="#828282" />
+														<path
+															d="M17.625 15.75C18.2463 15.75 18.75 15.2463 18.75 14.625C18.75 14.0037 18.2463 13.5 17.625 13.5C17.0037 13.5 16.5 14.0037 16.5 14.625C16.5 15.2463 17.0037 15.75 17.625 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 15.75C6.99632 15.75 7.5 15.2463 7.5 14.625C7.5 14.0037 6.99632 13.5 6.375 13.5C5.75368 13.5 5.25 14.0037 5.25 14.625C5.25 15.2463 5.75368 15.75 6.375 15.75Z"
+															fill="#828282" />
+														<path
+															d="M10.125 15.75C10.7463 15.75 11.25 15.2463 11.25 14.625C11.25 14.0037 10.7463 13.5 10.125 13.5C9.50368 13.5 9 14.0037 9 14.625C9 15.2463 9.50368 15.75 10.125 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 19.5C6.99632 19.5 7.5 18.9963 7.5 18.375C7.5 17.7537 6.99632 17.25 6.375 17.25C5.75368 17.25 5.25 17.7537 5.25 18.375C5.25 18.9963 5.75368 19.5 6.375 19.5Z"
+															fill="#828282" />
+														<path
+															d="M10.125 19.5C10.7463 19.5 11.25 18.9963 11.25 18.375C11.25 17.7537 10.7463 17.25 10.125 17.25C9.50368 17.25 9 17.7537 9 18.375C9 18.9963 9.50368 19.5 10.125 19.5Z"
+															fill="#828282" />
+														<path
+															d="M13.875 19.5C14.4963 19.5 15 18.9963 15 18.375C15 17.7537 14.4963 17.25 13.875 17.25C13.2537 17.25 12.75 17.7537 12.75 18.375C12.75 18.9963 13.2537 19.5 13.875 19.5Z"
+															fill="#828282" />
+														<path d="M6 2.24999V3.74999M18 2.24999V3.74999" stroke="#828282"
+															stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M21.75 7.5H2.25" stroke="#828282" stroke-width="2"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">10-12 березня</span>
+											</div>
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true"><svg width="24" height="24"
+														viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M12 2.99999C7.03125 2.99999 3 7.03124 3 12C3 16.9687 7.03125 21 12 21C16.9688 21 21 16.9687 21 12C21 7.03124 16.9688 2.99999 12 2.99999Z"
+															stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+														<path d="M12 6V12.75H16.5" stroke="#828282" stroke-width="2"
+															stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">11:00</span>
+											</div>
+										</div>
+
+										<div class="event-card__badge event-card__badge--online">
+											<span class="event-card__badge-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.5683 14.4743L21.4453 17.2034C21.5595 17.2541 21.6846 17.2755 21.8091 17.2657C21.9337 17.2558 22.0539 17.215 22.1586 17.1469C22.2634 17.0788 22.3495 16.9856 22.4092 16.8758C22.4688 16.766 22.5 16.643 22.5 16.518V7.48241C22.5 7.35745 22.4688 7.23446 22.4092 7.12463C22.3495 7.01481 22.2634 6.92161 22.1586 6.85353C22.0539 6.78544 21.9337 6.74461 21.8091 6.73476C21.6846 6.7249 21.5595 6.74633 21.4453 6.7971L17.5683 9.52616C17.47 9.59537 17.3897 9.68719 17.3343 9.7939C17.279 9.9006 17.25 10.0191 17.25 10.1393V13.8612C17.25 13.9814 17.279 14.0998 17.3343 14.2066C17.3897 14.3133 17.47 14.4051 17.5683 14.4743Z" stroke="#181A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M12.5625 18H3.9375C3.29161 17.9981 2.67269 17.7407 2.21598 17.284C1.75926 16.8273 1.50186 16.2084 1.5 15.5625V8.4375C1.50186 7.79161 1.75926 7.1727 2.21598 6.71598C2.67269 6.25926 3.29161 6.00186 3.9375 6H12.585C13.2249 6.00198 13.838 6.25705 14.2905 6.70952C14.743 7.16199 14.998 7.77511 15 8.415V15.5625C14.9981 16.2084 14.7407 16.8273 14.284 17.284C13.8273 17.7407 13.2084 17.9981 12.5625 18Z" stroke="#181A1B" stroke-width="2" stroke-miterlimit="10"/>
+													</svg>
+													
+											</span>
+											Онлайн
+										</div>
+									</div>
+
+									<h3 class="event-card__title">«Базовий курс масажу 2.0»</h3>
+
+									<div class="event-card__details">
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">Онлайн (Zoom)</span>
+										</div>
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true"><svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M16.125 6.75C15.9413 9.22828 14.0625 11.25 12 11.25C9.93754 11.25 8.05551 9.22875 7.87504 6.75C7.68754 4.17188 9.51566 2.25 12 2.25C14.4844 2.25 16.3125 4.21875 16.125 6.75Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12.0001 14.25C7.92199 14.25 3.78293 16.5 3.01699 20.7469C2.92465 21.2588 3.21433 21.75 3.75011 21.75H20.2501C20.7864 21.75 21.0761 21.2588 20.9837 20.7469C20.2173 16.5 16.0782 14.25 12.0001 14.25Z"
+														stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">Світлани Ретьман</span>
+										</div>
+									</div>
+
+									<div class="event-card__actions">
+										<button class="btn btn-primary event-card__btn event-card__btn--signup" type="button"
+											data-bs-toggle="modal" data-bs-target="#signupModal"
+											data-event-title="«Авторський масаж обличчя»" data-event-date="10-12 березня"
+											data-event-time="11:00" data-event-format="Онлайн" data-event-place="Онлайн (Zoom)"
+											data-event-teacher="Світлани Ретьман">
+											Записатись <span class="event-card__btn-arrow" aria-hidden="true"><svg width="36"
+													height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+														stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10"
+														stroke-linecap="square" />
+												</svg></span>
+										</button>
+
+										<a class="btn btn-outline event-card__btn event-card__btn--more" href="#">
+											Детальніше
+										</a>
+									</div>
+								</article>
+								<article class="event-card" role="listitem">
+									<div class="event-card__top">
+										<div class="event-card__meta">
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true"><svg width="24" height="24"
+														viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M19.5 3.74999H4.5C3.25736 3.74999 2.25 4.75735 2.25 5.99999V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H19.5C20.7426 21.75 21.75 20.7426 21.75 19.5V5.99999C21.75 4.75735 20.7426 3.74999 19.5 3.74999Z"
+															stroke="#828282" stroke-width="2" stroke-linejoin="round" />
+														<path
+															d="M13.875 12C14.4963 12 15 11.4963 15 10.875C15 10.2537 14.4963 9.75 13.875 9.75C13.2537 9.75 12.75 10.2537 12.75 10.875C12.75 11.4963 13.2537 12 13.875 12Z"
+															fill="#828282" />
+														<path
+															d="M17.625 12C18.2463 12 18.75 11.4963 18.75 10.875C18.75 10.2537 18.2463 9.75 17.625 9.75C17.0037 9.75 16.5 10.2537 16.5 10.875C16.5 11.4963 17.0037 12 17.625 12Z"
+															fill="#828282" />
+														<path
+															d="M13.875 15.75C14.4963 15.75 15 15.2463 15 14.625C15 14.0037 14.4963 13.5 13.875 13.5C13.2537 13.5 12.75 14.0037 12.75 14.625C12.75 15.2463 13.2537 15.75 13.875 15.75Z"
+															fill="#828282" />
+														<path
+															d="M17.625 15.75C18.2463 15.75 18.75 15.2463 18.75 14.625C18.75 14.0037 18.2463 13.5 17.625 13.5C17.0037 13.5 16.5 14.0037 16.5 14.625C16.5 15.2463 17.0037 15.75 17.625 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 15.75C6.99632 15.75 7.5 15.2463 7.5 14.625C7.5 14.0037 6.99632 13.5 6.375 13.5C5.75368 13.5 5.25 14.0037 5.25 14.625C5.25 15.2463 5.75368 15.75 6.375 15.75Z"
+															fill="#828282" />
+														<path
+															d="M10.125 15.75C10.7463 15.75 11.25 15.2463 11.25 14.625C11.25 14.0037 10.7463 13.5 10.125 13.5C9.50368 13.5 9 14.0037 9 14.625C9 15.2463 9.50368 15.75 10.125 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 19.5C6.99632 19.5 7.5 18.9963 7.5 18.375C7.5 17.7537 6.99632 17.25 6.375 17.25C5.75368 17.25 5.25 17.7537 5.25 18.375C5.25 18.9963 5.75368 19.5 6.375 19.5Z"
+															fill="#828282" />
+														<path
+															d="M10.125 19.5C10.7463 19.5 11.25 18.9963 11.25 18.375C11.25 17.7537 10.7463 17.25 10.125 17.25C9.50368 17.25 9 17.7537 9 18.375C9 18.9963 9.50368 19.5 10.125 19.5Z"
+															fill="#828282" />
+														<path
+															d="M13.875 19.5C14.4963 19.5 15 18.9963 15 18.375C15 17.7537 14.4963 17.25 13.875 17.25C13.2537 17.25 12.75 17.7537 12.75 18.375C12.75 18.9963 13.2537 19.5 13.875 19.5Z"
+															fill="#828282" />
+														<path d="M6 2.24999V3.74999M18 2.24999V3.74999" stroke="#828282"
+															stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M21.75 7.5H2.25" stroke="#828282" stroke-width="2"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">10-12 березня</span>
+											</div>
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true"><svg width="24" height="24"
+														viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M12 2.99999C7.03125 2.99999 3 7.03124 3 12C3 16.9687 7.03125 21 12 21C16.9688 21 21 16.9687 21 12C21 7.03124 16.9688 2.99999 12 2.99999Z"
+															stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+														<path d="M12 6V12.75H16.5" stroke="#828282" stroke-width="2"
+															stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">11:00</span>
+											</div>
+										</div>
+
+										<div class="event-card__badge event-card__badge--online">
+											<span class="event-card__badge-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.5683 14.4743L21.4453 17.2034C21.5595 17.2541 21.6846 17.2755 21.8091 17.2657C21.9337 17.2558 22.0539 17.215 22.1586 17.1469C22.2634 17.0788 22.3495 16.9856 22.4092 16.8758C22.4688 16.766 22.5 16.643 22.5 16.518V7.48241C22.5 7.35745 22.4688 7.23446 22.4092 7.12463C22.3495 7.01481 22.2634 6.92161 22.1586 6.85353C22.0539 6.78544 21.9337 6.74461 21.8091 6.73476C21.6846 6.7249 21.5595 6.74633 21.4453 6.7971L17.5683 9.52616C17.47 9.59537 17.3897 9.68719 17.3343 9.7939C17.279 9.9006 17.25 10.0191 17.25 10.1393V13.8612C17.25 13.9814 17.279 14.0998 17.3343 14.2066C17.3897 14.3133 17.47 14.4051 17.5683 14.4743Z" stroke="#181A1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M12.5625 18H3.9375C3.29161 17.9981 2.67269 17.7407 2.21598 17.284C1.75926 16.8273 1.50186 16.2084 1.5 15.5625V8.4375C1.50186 7.79161 1.75926 7.1727 2.21598 6.71598C2.67269 6.25926 3.29161 6.00186 3.9375 6H12.585C13.2249 6.00198 13.838 6.25705 14.2905 6.70952C14.743 7.16199 14.998 7.77511 15 8.415V15.5625C14.9981 16.2084 14.7407 16.8273 14.284 17.284C13.8273 17.7407 13.2084 17.9981 12.5625 18Z" stroke="#181A1B" stroke-width="2" stroke-miterlimit="10"/>
+													</svg>
+													
+											</span>
+											Онлайн
+										</div>
+									</div>
+
+									<h3 class="event-card__title">«Авторський масаж обличчя»</h3>
+
+									<div class="event-card__details">
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true"><svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">Онлайн (Zoom)</span>
+										</div>
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true"><svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M16.125 6.75C15.9413 9.22828 14.0625 11.25 12 11.25C9.93754 11.25 8.05551 9.22875 7.87504 6.75C7.68754 4.17188 9.51566 2.25 12 2.25C14.4844 2.25 16.3125 4.21875 16.125 6.75Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12.0001 14.25C7.92199 14.25 3.78293 16.5 3.01699 20.7469C2.92465 21.2588 3.21433 21.75 3.75011 21.75H20.2501C20.7864 21.75 21.0761 21.2588 20.9837 20.7469C20.2173 16.5 16.0782 14.25 12.0001 14.25Z"
+														stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">Світлани Ретьман</span>
+										</div>
+									</div>
+
+									<div class="event-card__actions">
+										<button class="btn btn-primary event-card__btn event-card__btn--signup" type="button"
+											data-bs-toggle="modal" data-bs-target="#signupModal"
+											data-event-title="«Авторський масаж обличчя»" data-event-date="10-12 березня"
+											data-event-time="11:00" data-event-format="Онлайн" data-event-place="Онлайн (Zoom)"
+											data-event-teacher="Світлани Ретьман">
+											Записатись <span class="event-card__btn-arrow" aria-hidden="true"><svg width="36"
+													height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+														stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10"
+														stroke-linecap="square" />
+												</svg></span>
+										</button>
+
+										<a class="btn btn-outline event-card__btn event-card__btn--more" href="#">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</div>
+						</div>
+
+						<!-- ================= APR ================= -->
+
+						<div class="tab-pane fade schedule-pane" id="pane-apr" role="tabpanel" aria-labelledby="tab-apr"
+							tabindex="0">
+							<div class="schedule-grid" role="list">
+								<!-- Repeat event-card items (dynamic in WP) -->
+								<article class="event-card" role="listitem">
+									<div class="event-card__top">
+										<div class="event-card__meta">
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true"><svg width="24" height="24"
+														viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M19.5 3.74999H4.5C3.25736 3.74999 2.25 4.75735 2.25 5.99999V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H19.5C20.7426 21.75 21.75 20.7426 21.75 19.5V5.99999C21.75 4.75735 20.7426 3.74999 19.5 3.74999Z"
+															stroke="#828282" stroke-width="2" stroke-linejoin="round" />
+														<path
+															d="M13.875 12C14.4963 12 15 11.4963 15 10.875C15 10.2537 14.4963 9.75 13.875 9.75C13.2537 9.75 12.75 10.2537 12.75 10.875C12.75 11.4963 13.2537 12 13.875 12Z"
+															fill="#828282" />
+														<path
+															d="M17.625 12C18.2463 12 18.75 11.4963 18.75 10.875C18.75 10.2537 18.2463 9.75 17.625 9.75C17.0037 9.75 16.5 10.2537 16.5 10.875C16.5 11.4963 17.0037 12 17.625 12Z"
+															fill="#828282" />
+														<path
+															d="M13.875 15.75C14.4963 15.75 15 15.2463 15 14.625C15 14.0037 14.4963 13.5 13.875 13.5C13.2537 13.5 12.75 14.0037 12.75 14.625C12.75 15.2463 13.2537 15.75 13.875 15.75Z"
+															fill="#828282" />
+														<path
+															d="M17.625 15.75C18.2463 15.75 18.75 15.2463 18.75 14.625C18.75 14.0037 18.2463 13.5 17.625 13.5C17.0037 13.5 16.5 14.0037 16.5 14.625C16.5 15.2463 17.0037 15.75 17.625 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 15.75C6.99632 15.75 7.5 15.2463 7.5 14.625C7.5 14.0037 6.99632 13.5 6.375 13.5C5.75368 13.5 5.25 14.0037 5.25 14.625C5.25 15.2463 5.75368 15.75 6.375 15.75Z"
+															fill="#828282" />
+														<path
+															d="M10.125 15.75C10.7463 15.75 11.25 15.2463 11.25 14.625C11.25 14.0037 10.7463 13.5 10.125 13.5C9.50368 13.5 9 14.0037 9 14.625C9 15.2463 9.50368 15.75 10.125 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 19.5C6.99632 19.5 7.5 18.9963 7.5 18.375C7.5 17.7537 6.99632 17.25 6.375 17.25C5.75368 17.25 5.25 17.7537 5.25 18.375C5.25 18.9963 5.75368 19.5 6.375 19.5Z"
+															fill="#828282" />
+														<path
+															d="M10.125 19.5C10.7463 19.5 11.25 18.9963 11.25 18.375C11.25 17.7537 10.7463 17.25 10.125 17.25C9.50368 17.25 9 17.7537 9 18.375C9 18.9963 9.50368 19.5 10.125 19.5Z"
+															fill="#828282" />
+														<path
+															d="M13.875 19.5C14.4963 19.5 15 18.9963 15 18.375C15 17.7537 14.4963 17.25 13.875 17.25C13.2537 17.25 12.75 17.7537 12.75 18.375C12.75 18.9963 13.2537 19.5 13.875 19.5Z"
+															fill="#828282" />
+														<path d="M6 2.24999V3.74999M18 2.24999V3.74999" stroke="#828282"
+															stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M21.75 7.5H2.25" stroke="#828282" stroke-width="2"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">05-06 квітня</span>
+											</div>
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true"><svg width="24" height="24"
+														viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M12 2.99999C7.03125 2.99999 3 7.03124 3 12C3 16.9687 7.03125 21 12 21C16.9688 21 21 16.9687 21 12C21 7.03124 16.9688 2.99999 12 2.99999Z"
+															stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+														<path d="M12 6V12.75H16.5" stroke="#828282" stroke-width="2"
+															stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">10:00</span>
+											</div>
+										</div>
+
+										<div class="event-card__badge event-card__badge--offline">
+											<span class="event-card__badge-icon" aria-hidden="true"><svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											Офлайн
+										</div>
+									</div>
+
+									<h3 class="event-card__title">Вісцеральний масаж</h3>
+
+									<div class="event-card__details">
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true"><svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">м.Київ, вул. Джона Маккейна , 13/2</span>
+										</div>
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true"><svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M16.125 6.75C15.9413 9.22828 14.0625 11.25 12 11.25C9.93754 11.25 8.05551 9.22875 7.87504 6.75C7.68754 4.17188 9.51566 2.25 12 2.25C14.4844 2.25 16.3125 4.21875 16.125 6.75Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12.0001 14.25C7.92199 14.25 3.78293 16.5 3.01699 20.7469C2.92465 21.2588 3.21433 21.75 3.75011 21.75H20.2501C20.7864 21.75 21.0761 21.2588 20.9837 20.7469C20.2173 16.5 16.0782 14.25 12.0001 14.25Z"
+														stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">Світлани Ретьман</span>
+										</div>
+									</div>
+
+									<div class="event-card__actions">
+										<button class="btn btn-primary event-card__btn event-card__btn--signup" type="button"
+											data-bs-toggle="modal" data-bs-target="#signupModal"
+											data-event-title="Вісцеральний масаж" data-event-date="05-06 квітня"
+											data-event-time="10:00" data-event-format="Офлайн"
+											data-event-place="м.Київ, вул. Джона Маккейна , 13/2"
+											data-event-teacher="Світлани Ретьман">
+											Записатись <span class="event-card__btn-arrow" aria-hidden="true"><svg width="36"
+													height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+														stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10"
+														stroke-linecap="square" />
+												</svg></span>
+										</button>
+
+										<a class="btn btn-outline event-card__btn event-card__btn--more" href="#">
+											Детальніше
+										</a>
+									</div>
+								</article>
+								<article class="event-card" role="listitem">
+									<div class="event-card__top">
+										<div class="event-card__meta">
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true"><svg width="24" height="24"
+														viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M19.5 3.74999H4.5C3.25736 3.74999 2.25 4.75735 2.25 5.99999V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H19.5C20.7426 21.75 21.75 20.7426 21.75 19.5V5.99999C21.75 4.75735 20.7426 3.74999 19.5 3.74999Z"
+															stroke="#828282" stroke-width="2" stroke-linejoin="round" />
+														<path
+															d="M13.875 12C14.4963 12 15 11.4963 15 10.875C15 10.2537 14.4963 9.75 13.875 9.75C13.2537 9.75 12.75 10.2537 12.75 10.875C12.75 11.4963 13.2537 12 13.875 12Z"
+															fill="#828282" />
+														<path
+															d="M17.625 12C18.2463 12 18.75 11.4963 18.75 10.875C18.75 10.2537 18.2463 9.75 17.625 9.75C17.0037 9.75 16.5 10.2537 16.5 10.875C16.5 11.4963 17.0037 12 17.625 12Z"
+															fill="#828282" />
+														<path
+															d="M13.875 15.75C14.4963 15.75 15 15.2463 15 14.625C15 14.0037 14.4963 13.5 13.875 13.5C13.2537 13.5 12.75 14.0037 12.75 14.625C12.75 15.2463 13.2537 15.75 13.875 15.75Z"
+															fill="#828282" />
+														<path
+															d="M17.625 15.75C18.2463 15.75 18.75 15.2463 18.75 14.625C18.75 14.0037 18.2463 13.5 17.625 13.5C17.0037 13.5 16.5 14.0037 16.5 14.625C16.5 15.2463 17.0037 15.75 17.625 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 15.75C6.99632 15.75 7.5 15.2463 7.5 14.625C7.5 14.0037 6.99632 13.5 6.375 13.5C5.75368 13.5 5.25 14.0037 5.25 14.625C5.25 15.2463 5.75368 15.75 6.375 15.75Z"
+															fill="#828282" />
+														<path
+															d="M10.125 15.75C10.7463 15.75 11.25 15.2463 11.25 14.625C11.25 14.0037 10.7463 13.5 10.125 13.5C9.50368 13.5 9 14.0037 9 14.625C9 15.2463 9.50368 15.75 10.125 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 19.5C6.99632 19.5 7.5 18.9963 7.5 18.375C7.5 17.7537 6.99632 17.25 6.375 17.25C5.75368 17.25 5.25 17.7537 5.25 18.375C5.25 18.9963 5.75368 19.5 6.375 19.5Z"
+															fill="#828282" />
+														<path
+															d="M10.125 19.5C10.7463 19.5 11.25 18.9963 11.25 18.375C11.25 17.7537 10.7463 17.25 10.125 17.25C9.50368 17.25 9 17.7537 9 18.375C9 18.9963 9.50368 19.5 10.125 19.5Z"
+															fill="#828282" />
+														<path
+															d="M13.875 19.5C14.4963 19.5 15 18.9963 15 18.375C15 17.7537 14.4963 17.25 13.875 17.25C13.2537 17.25 12.75 17.7537 12.75 18.375C12.75 18.9963 13.2537 19.5 13.875 19.5Z"
+															fill="#828282" />
+														<path d="M6 2.24999V3.74999M18 2.24999V3.74999" stroke="#828282"
+															stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M21.75 7.5H2.25" stroke="#828282" stroke-width="2"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">05-06 квітня</span>
+											</div>
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true"><svg width="24" height="24"
+														viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M12 2.99999C7.03125 2.99999 3 7.03124 3 12C3 16.9687 7.03125 21 12 21C16.9688 21 21 16.9687 21 12C21 7.03124 16.9688 2.99999 12 2.99999Z"
+															stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+														<path d="M12 6V12.75H16.5" stroke="#828282" stroke-width="2"
+															stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">10:00</span>
+											</div>
+										</div>
+
+										<div class="event-card__badge event-card__badge--offline">
+											<span class="event-card__badge-icon" aria-hidden="true"><svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											Офлайн
+										</div>
+									</div>
+
+									<h3 class="event-card__title">Вісцеральний масаж</h3>
+
+									<div class="event-card__details">
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true"><svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">м.Київ, вул. Джона Маккейна , 13/2</span>
+										</div>
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true"><svg width="24" height="24"
+													viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M16.125 6.75C15.9413 9.22828 14.0625 11.25 12 11.25C9.93754 11.25 8.05551 9.22875 7.87504 6.75C7.68754 4.17188 9.51566 2.25 12 2.25C14.4844 2.25 16.3125 4.21875 16.125 6.75Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12.0001 14.25C7.92199 14.25 3.78293 16.5 3.01699 20.7469C2.92465 21.2588 3.21433 21.75 3.75011 21.75H20.2501C20.7864 21.75 21.0761 21.2588 20.9837 20.7469C20.2173 16.5 16.0782 14.25 12.0001 14.25Z"
+														stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">Світлани Ретьман</span>
+										</div>
+									</div>
+
+									<div class="event-card__actions">
+										<button class="btn btn-primary event-card__btn event-card__btn--signup" type="button"
+											data-bs-toggle="modal" data-bs-target="#signupModal"
+											data-event-title="Вісцеральний масаж" data-event-date="05-06 квітня"
+											data-event-time="10:00" data-event-format="Офлайн"
+											data-event-place="м.Київ, вул. Джона Маккейна , 13/2"
+											data-event-teacher="Світлани Ретьман">
+											Записатись<span class="event-card__btn-arrow" aria-hidden="true"><svg width="36"
+													height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+														stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10"
+														stroke-linecap="square" />
+												</svg></span>
+										</button>
+
+										<a class="btn btn-outline event-card__btn event-card__btn--more" href="#">
+											Детальніше
+										</a>
+									</div>
+								</article>
+								<article class="event-card" role="listitem" data-event-card>
+									<div class="event-card__top">
+										<!-- meta left -->
+										<div class="event-card__meta">
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M19.5 3.74999H4.5C3.25736 3.74999 2.25 4.75735 2.25 5.99999V19.5C2.25 20.7426 3.25736 21.75 4.5 21.75H19.5C20.7426 21.75 21.75 20.7426 21.75 19.5V5.99999C21.75 4.75735 20.7426 3.74999 19.5 3.74999Z"
+															stroke="#828282" stroke-width="2" stroke-linejoin="round" />
+														<path
+															d="M13.875 12C14.4963 12 15 11.4963 15 10.875C15 10.2537 14.4963 9.75 13.875 9.75C13.2537 9.75 12.75 10.2537 12.75 10.875C12.75 11.4963 13.2537 12 13.875 12Z"
+															fill="#828282" />
+														<path
+															d="M17.625 12C18.2463 12 18.75 11.4963 18.75 10.875C18.75 10.2537 18.2463 9.75 17.625 9.75C17.0037 9.75 16.5 10.2537 16.5 10.875C16.5 11.4963 17.0037 12 17.625 12Z"
+															fill="#828282" />
+														<path
+															d="M13.875 15.75C14.4963 15.75 15 15.2463 15 14.625C15 14.0037 14.4963 13.5 13.875 13.5C13.2537 13.5 12.75 14.0037 12.75 14.625C12.75 15.2463 13.2537 15.75 13.875 15.75Z"
+															fill="#828282" />
+														<path
+															d="M17.625 15.75C18.2463 15.75 18.75 15.2463 18.75 14.625C18.75 14.0037 18.2463 13.5 17.625 13.5C17.0037 13.5 16.5 14.0037 16.5 14.625C16.5 15.2463 17.0037 15.75 17.625 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 15.75C6.99632 15.75 7.5 15.2463 7.5 14.625C7.5 14.0037 6.99632 13.5 6.375 13.5C5.75368 13.5 5.25 14.0037 5.25 14.625C5.25 15.2463 5.75368 15.75 6.375 15.75Z"
+															fill="#828282" />
+														<path
+															d="M10.125 15.75C10.7463 15.75 11.25 15.2463 11.25 14.625C11.25 14.0037 10.7463 13.5 10.125 13.5C9.50368 13.5 9 14.0037 9 14.625C9 15.2463 9.50368 15.75 10.125 15.75Z"
+															fill="#828282" />
+														<path
+															d="M6.375 19.5C6.99632 19.5 7.5 18.9963 7.5 18.375C7.5 17.7537 6.99632 17.25 6.375 17.25C5.75368 17.25 5.25 17.7537 5.25 18.375C5.25 18.9963 5.75368 19.5 6.375 19.5Z"
+															fill="#828282" />
+														<path
+															d="M10.125 19.5C10.7463 19.5 11.25 18.9963 11.25 18.375C11.25 17.7537 10.7463 17.25 10.125 17.25C9.50368 17.25 9 17.7537 9 18.375C9 18.9963 9.50368 19.5 10.125 19.5Z"
+															fill="#828282" />
+														<path
+															d="M13.875 19.5C14.4963 19.5 15 18.9963 15 18.375C15 17.7537 14.4963 17.25 13.875 17.25C13.2537 17.25 12.75 17.7537 12.75 18.375C12.75 18.9963 13.2537 19.5 13.875 19.5Z"
+															fill="#828282" />
+														<path d="M6 2.24999V3.74999M18 2.24999V3.74999" stroke="#828282"
+															stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M21.75 7.5H2.25" stroke="#828282" stroke-width="2"
+															stroke-linejoin="round" />
+													</svg>
+												</span>
+												<span class="event-card__meta-text">16-20 лютого</span>
+											</div>
+
+											<div class="event-card__meta-item">
+												<span class="event-card__icon" aria-hidden="true">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M12 2.99999C7.03125 2.99999 3 7.03124 3 12C3 16.9687 7.03125 21 12 21C16.9688 21 21 16.9687 21 12C21 7.03124 16.9688 2.99999 12 2.99999Z"
+															stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+														<path d="M12 6V12.75H16.5" stroke="#828282" stroke-width="2"
+															stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+
+												</span>
+												<span class="event-card__meta-text">10:00</span>
+											</div>
+										</div>
+
+										<!-- badge right -->
+										<div class="event-card__badge event-card__badge--offline">
+											<span class="event-card__badge-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#181A1B" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+
+											</span>
+											Офлайн
+										</div>
+									</div>
+
+									<h3 class="event-card__title">Базовий курс масажу</h3>
+
+									<div class="event-card__details">
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M12 2.25C8.27344 2.25 5.25 5.12766 5.25 8.67188C5.25 12.75 9.75 19.2127 11.4023 21.4448C11.4709 21.5391 11.5608 21.6157 11.6647 21.6686C11.7686 21.7215 11.8835 21.749 12 21.749C12.1165 21.749 12.2314 21.7215 12.3353 21.6686C12.4392 21.6157 12.5291 21.5391 12.5977 21.4448C14.25 19.2136 18.75 12.7533 18.75 8.67188C18.75 5.12766 15.7266 2.25 12 2.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+												</svg>
+											</span>
+											<span class="event-card__detail-text">м.Київ, вул. Джона Маккейна , 13/2</span>
+										</div>
+
+										<div class="event-card__detail">
+											<span class="event-card__detail-icon" aria-hidden="true">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M16.125 6.75C15.9413 9.22828 14.0625 11.25 12 11.25C9.93754 11.25 8.05551 9.22875 7.87504 6.75C7.68754 4.17188 9.51566 2.25 12 2.25C14.4844 2.25 16.3125 4.21875 16.125 6.75Z"
+														stroke="#828282" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" />
+													<path
+														d="M12.0001 14.25C7.92199 14.25 3.78293 16.5 3.01699 20.7469C2.92465 21.2588 3.21433 21.75 3.75011 21.75H20.2501C20.7864 21.75 21.0761 21.2588 20.9837 20.7469C20.2173 16.5 16.0782 14.25 12.0001 14.25Z"
+														stroke="#828282" stroke-width="2" stroke-miterlimit="10" />
+												</svg>
+
+											</span>
+											<span class="event-card__detail-text">Світлани Ретьман</span>
+										</div>
+									</div>
+
+									<div class="event-card__actions">
+										<!-- Записатися (opens modal) -->
+										<button class="btn btn-primary event-card__btn event-card__btn--signup" type="button"
+											data-bs-toggle="modal" data-bs-target="#signupModal"
+											data-event-title="Базовий курс масажу" data-event-date="16-20 лютого"
+											data-event-time="10:00" data-event-format="Офлайн"
+											data-event-place="м.Київ, вул. Джона Маккейна , 13/2"
+											data-event-teacher="Світлани Ретьман">
+											Записатись
+											<span class="event-card__btn-arrow" aria-hidden="true"><svg width="36" height="36"
+													viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+														stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10"
+														stroke-linecap="square" />
+												</svg></span>
+										</button>
+
+										<!-- Детальніше -->
+										<a class="btn btn-outline event-card__btn event-card__btn--more" href="#">
+											Детальніше
+										</a>
+									</div>
+								</article>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<!-- /schedule-tabs -->
+			</div>
+		</section>
+
+		<!-- =========================
+	  SIGNUP MODAL (Bootstrap)
+	  Content filled from data-* of clicked card (later JS)
+	========================= -->
+		<div class="modal fade signup-modal" id="signupModal" tabindex="-1" aria-labelledby="signupModalTitle"
+			aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered signup-modal__dialog">
+				<div class="modal-content signup-modal__content">
+					<div class="modal-body signup-modal__body">
+						<h2 class="signup-modal__title" id="signupModalTitle">Записатись на подію</h2>
+						<p class="signup-modal__subtitle">
+							Заповніть форму, і ми зв’яжемося з вами для підтвердження реєстрації
+						</p>
+
+						<!-- Event preview (dynamic text) -->
+						<div class="signup-modal__event" data-modal-event>
+							<h3 class="signup-modal__event-title" data-modal-title>Базовий курс масажу</h3>
+							<ul class="signup-modal__event-list">
+								<li class="signup-modal__event-item">
+									<span class="signup-modal__event-label">Дата:</span>
+									<span class="signup-modal__event-value" data-modal-date>16-20 лютого</span>
+									<span class="signup-modal__event-value">о</span>
+									<span class="signup-modal__event-value" data-modal-time>10:00</span>
+								</li>
+								<li class="signup-modal__event-item">
+									<span class="signup-modal__event-label">Формат:</span>
+									<span class="signup-modal__event-value" data-modal-format>Офлайн</span>
+								</li>
+								<li class="signup-modal__event-item">
+									<span class="signup-modal__event-label">Місце:</span>
+									<span class="signup-modal__event-value" data-modal-place>м.Київ, вул. Джона Маккейна ,
+										13/2</span>
+								</li>
+								<li class="signup-modal__event-item">
+									<span class="signup-modal__event-label">Викладач:</span>
+									<span class="signup-modal__event-value" data-modal-teacher>Світлани Ретьман</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Form -->
+						<form class="signup-form" action="#" method="post" data-signup-form>
+							<!-- hidden: event id (for WP) -->
+							<input type="hidden" name="event_id" value="" data-modal-event-id>
+
+							<div class="signup-form__field">
+								<label class="signup-form__label" for="nameUa">
+									Ім’я та прізвище<span aria-hidden="true">*</span>
+									<span class="signup-form__hint">українською</span>
+								</label>
+								<input class="signup-form__input" id="nameUa" name="name_ua" type="text"
+									placeholder="Введіть ваше ім’я та прізвище" required>
+							</div>
+
+							<div class="signup-form__field">
+								<label class="signup-form__label" for="nameLat">
+									Ім’я та прізвище<span aria-hidden="true">*</span>
+									<span class="signup-form__hint">латиною</span>
+								</label>
+								<input class="signup-form__input" id="nameLat" name="name_lat" type="text"
+									placeholder="Введіть ваше ім’я та прізвище" required>
+							</div>
+
+							<div class="signup-form__field">
+								<label class="signup-form__label" for="phone">
+									Телефон<span aria-hidden="true">*</span>
+								</label>
+								<input class="signup-form__input phone" id="phone" name="phone" type="tel"
+									placeholder="+380 (__) ___-__-__" required>
+							</div>
+
+							<div class="signup-form__field">
+								<label class="signup-form__label" for="email">
+									Email<span aria-hidden="true">*</span>
+								</label>
+								<input class="signup-form__input" id="email" name="email" type="email"
+									placeholder="Введіть вашу електронну пошту" required>
+							</div>
+
+							<div class="signup-form__field">
+								<label class="signup-form__label" for="comment">
+									Коментар <span class="signup-form__optional">(необов’язково)</span>
+								</label>
+								<textarea class="signup-form__textarea" id="comment" name="comment" rows="4"
+									placeholder="Додаткова інформація або питання"></textarea>
+							</div>
+
+							<div class="signup-form__actions">
+								<button class="btn btn-primary signup-form__submit" type="submit">
+									Підтвердити запис
+								</button>
+
+								<button class="btn btn-outline signup-form__cancel" type="button" data-bs-dismiss="modal">
+									Скасувати
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+
+	<section class="help contacts-help">
+		<div class="container">
+			<div class="help__content">
+
+				<h2 class="help__title">
+					Не знайшли потрібний курс?
+				</h2>
+
+				<p class="help__text">
+					Зв'яжіться з нами і ми допоможемо підібрати навчання під ваші потреби!
+				</p>
+
+				<a href="https://t.me/+380971695714" class="help__btn btn btn--primary hvr-float-shadow">
+					<span class="help__btn-text">Ми на зв'язку</span>
+					<span class="help__btn-icon" aria-hidden="true">
+						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+								fill="#0088CC" />
+							<path
+								d="M8.09992 15.7083C12.3949 13.8371 15.2589 12.6034 16.6919 12.0074C20.7834 10.3056 21.6335 10.01 22.1877 10.0001C22.3095 9.99805 22.582 10.0283 22.7586 10.1715C22.9076 10.2924 22.9486 10.4558 22.9683 10.5705C22.9879 10.6851 23.0123 10.9464 22.9929 11.1505C22.7712 13.4801 21.8118 19.1335 21.3237 21.7427C21.1172 22.8468 20.7105 23.217 20.3168 23.2532C19.4613 23.3319 18.8116 22.6878 17.9829 22.1446C16.6862 21.2946 15.9537 20.7654 14.695 19.936C13.2404 18.9774 14.1834 18.4506 15.0124 17.5896C15.2293 17.3643 18.999 13.9355 19.0719 13.6244C19.0811 13.5855 19.0895 13.4405 19.0034 13.3639C18.9172 13.2874 18.7901 13.3136 18.6983 13.3344C18.5683 13.3639 16.4968 14.7331 12.4839 17.4419C11.8959 17.8457 11.3633 18.0424 10.8862 18.0321C10.3601 18.0207 9.34822 17.7346 8.59598 17.4901C7.67333 17.1902 6.94002 17.0316 7.00388 16.5223C7.03714 16.257 7.40248 15.9856 8.09992 15.7083Z"
+								fill="#F9F9F9" />
+						</svg>
+
+					</span>
+				</a>
+
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+
+				<!-- TOP -->
+				<div class="footer__top">
+
+					<!-- Logo / Brand -->
+					<div class="footer_box">
+						<div class="footer__col footer__col--brand">
+							<a class="footer__brand" href="/" aria-label="Школа масажу Світлани Ретьман">
+								<!-- replace with <img> or inline svg -->
+								<img class="footer__brand-img" src="./assets/img/footer-logo.svg"
+									alt="Школа масажу — Світлани Ретьман">
+							</a>
+						</div>
+
+						<!-- Navigation -->
+						<nav class="footer__col footer__col--nav" aria-label="Навігація">
+							<h3 class="footer__title">Навігація</h3>
+
+							<ul class="footer__list">
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="courses.html">Курси</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="schedule.html">Розклад</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="shop.html">Магазин</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="aboutSchool.html">Про
+										школу</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="contacts.html">Контакти</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Popular courses -->
+					<div class="footer__col footer__col--courses">
+						<h3 class="footer__title">Популярні курси</h3>
+
+						<ul class="footer__list">
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Авторський масаж обличчя</a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center" href="#">Базові
+									принципи <p>мануальної терапії</p></a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Вісцеральний масаж</a></li>
+						</ul>
+					</div>
+
+					<!-- Contacts -->
+					<div class="footer__col footer__col--contacts">
+						<h3 class="footer__title footer__title--contacts">Контакти</h3>
+						<h3 class="footer__title footer__title--mobile-only">Контакти</h3>
+
+						<div class="footer__contacts">
+							<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+								+38 (097) 169-57-14 (Світлана
+								<p>Ретьман)</p>
+							</a>
+
+							<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+								target="_blank">
+								Адреса Школи: м.Київ, вул. Джона
+								<p>Маккейна 13/2</p>
+							</a>
+
+							<div class="footer__socials" aria-label="Соціальні мережі">
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Viber">
+									<!-- icon -->
+									<img class="footer__social-icon" src="./assets/img/viber_icon.svg" alt="viber_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+									<img class="footer__social-icon" src="./assets/img/tiktok_icon.svg" alt="tiktok_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Telegram">
+									<img class="footer__social-icon" src="./assets/img/Telegram-Icon.svg" alt="telegram_icon">
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /TOP -->
+
+				<div class="footer__divider" role="presentation"></div>
+
+				<!-- BOTTOM -->
+				<div class="footer__bottom">
+					<ul class="footer__bottom-links">
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Публічна оферта</a>
+						</li>
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Політика конфіденційності</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /BOTTOM -->
+
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/jquery.maskedinput.js"></script>
+	<script src="./js/jquery.validate.min.js"></script>
+	<script src="./js/script.js"></script>
+
+</body>
+
+</html>

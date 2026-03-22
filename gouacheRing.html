@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+		rel="stylesheet">
+
+	<link rel="shortcut icon" href="./assets/img/Logo.svg" type="image/x-icon" sizes="32x32">
+
+	<!-- libs -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+	<!-- Splide v3 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
+	<!-- Reset + Main -->
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/style.css">
+
+	<title>Retman School — Товар</title>
+</head>
+
+<body>
+
+	<header class="header" id="header">
+		<div class="container">
+			<nav class="nav_desktop">
+				<ul>
+					<li><a href="index.html"><img src="./assets/img/home_img.svg" class="home_img" alt="home_img"></a></li>
+					<li><a class="hover-underline-animation-center" href="courses.html">Курси</a></li>
+					<li><a class="hover-underline-animation-center" href="schedule.html">Розклад</a></li>
+					<li><a class="hover-underline-animation-center" href="shop.html">Магазин</a></li>
+					<li><a class="hover-underline-animation-center" href="aboutSchool.html">Про школу</a></li>
+					<li><a class="hover-underline-animation-center" href="contacts.html">Контакти</a></li>
+					<li class="tel hover-underline-animation-center"><a id="tel" href="tel:+380971695714">+38 (097)
+							169-57-14</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- MOBILE HEADER -->
+		<div class="nav_mobile">
+			<button class="burger" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu"
+				aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+
+			<a class="nav_mobile__logo" href="index.html" aria-label="Головна">
+				<img src="./assets/img/Logo.svg" alt="Школа масажу" onerror="this.style.display='none'">
+				<span style="font-weight:700; display:none;">LOGO</span>
+			</a>
+
+			<a class="nav_mobile__phone" href="tel:+380971695714" aria-label="Подзвонити">
+				<img src="./assets/img/tel.svg" alt="tel">
+			</a>
+		</div>
+
+		<!-- Mobile drawer + overlay -->
+		<div class="overlay" id="menuOverlay" hidden></div>
+
+		<aside class="drawer" id="mobileMenu" aria-hidden="true">
+			<div class="drawer__top">
+				<a class="drawer__home" href="index.html" aria-label="Головна">
+					<img src="./assets/img/Logo.svg" alt="" onerror="this.style.display='none'">
+				</a>
+				<button class="drawer__close" type="button" aria-label="Закрити меню">×</button>
+			</div>
+
+			<nav class="drawer__nav">
+				<ul>
+					<li><a href="courses.html">Курси</a></li>
+					<li><a href="schedule.html">Розклад</a></li>
+					<li><a href="shop.html">Магазин</a></li>
+					<li><a href="aboutSchool.html">Про школу</a></li>
+					<li><a href="contacts.html">Контакти</a></li>
+				</ul>
+			</nav>
+
+			<div class="drawer__bottom drawer__bottom--contacts">
+				<div class="footer__col footer__col--contacts">
+					<h3 class="footer__title">Контакти</h3>
+
+					<div class="footer__contacts">
+						<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+							+38 (097) 169-57-14
+							<span>Світлана Ретьман</span>
+						</a>
+
+						<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+							target="_blank">
+							Адреса школи:
+							<span>м. Київ, вул. Джона Маккейна 13/2</span>
+						</a>
+
+						<div class="footer__socials">
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/viber_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/tiktok_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/Telegram-Icon.svg" alt="Telegram">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</aside>
+	</header>
+
+	<main class="main">
+
+		<section class="product-page">
+			<div class="container">
+
+				<!-- breadcrumbs -->
+				<nav class="breadcrumbs product-page__breadcrumbs" aria-label="Breadcrumb">
+					<ol class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link" href="index.html">Головна</a>
+						</li>
+
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link" href="shop.html">Магазин</a>
+						</li>
+
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__current" aria-current="page">Кільце Гуаша</span>
+						</li>
+					</ol>
+				</nav>
+
+				<!-- layout -->
+				<div class="product-page__grid">
+
+					<!-- LEFT: gallery -->
+					<div class="product-page__media">
+
+						<div class="product-gallery" data-product-gallery>
+
+							<!-- Main slider -->
+							<section id="product-main" class="splide product-gallery__main" aria-label="Галерея товару">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<img class="product-gallery__img" src="./assets/img/gouacheRing-main.png"
+												alt="Кільце Гуаша — фото 1" loading="lazy">
+										</li>
+										<li class="splide__slide">
+											<img class="product-gallery__img" src="./assets/img/gouacheRing-main.png"
+												alt="Кільце Гуаша — фото 1" loading="lazy">
+										</li>
+										<li class="splide__slide">
+											<img class="product-gallery__img" src="./assets/img/gouacheRing-main.png"
+												alt="Кільце Гуаша — фото 1" loading="lazy">
+										</li>
+									</ul>
+								</div>
+							</section>
+
+							<!-- Thumbnails -->
+							<section id="product-thumbs" class="splide product-gallery__thumbs" aria-label="Мініатюри товару">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide">
+											<img class="product-gallery__thumb" src="./assets/img/Ring_thumbs1.png"
+												alt="Мініатюра 1" loading="lazy">
+										</li>
+										<li class="splide__slide">
+											<img class="product-gallery__thumb" src="./assets/img/Ring_Thumbnail2.png"
+												alt="Мініатюра 2" loading="lazy">
+										</li>
+										<li class="splide__slide">
+											<img class="product-gallery__thumb" src="./assets/img/Ring_Thumbnail3.png"
+												alt="Мініатюра 3" loading="lazy">
+										</li>
+									</ul>
+								</div>
+							</section>
+
+						</div>
+					</div>
+
+					<!-- RIGHT: content -->
+					<div class="product-page__content">
+
+						<h1 class="product-page__title">Кільце Гуаша</h1>
+
+						<div class="product-page__topline">
+							<div class="product-page__price">1300 грн</div>
+
+							<!-- qty (как в макете) -->
+							<div class="product-qty" data-qty>
+								<button class="product-qty__btn product-qty__btn--minus" type="button"
+									aria-label="Зменшити">-</button>
+								<input class="product-qty__input" type="text" value="1" inputmode="numeric"
+									aria-label="Кількість">
+								<button class="product-qty__btn product-qty__btn--plus" type="button"
+									aria-label="Збільшити">+</button>
+							</div>
+						</div>
+
+						<hr class="product-page__divider">
+
+						<h2 class="product-page__subtitle">Опис</h2>
+						<p class="product-page__text">
+							Незамінний інструмент для кожного майстра, який прагне дарувати клієнтам вау-результати та водночас
+							берегти свої руки й енергію.
+						</p>
+
+						<h2 class="product-page__subtitle">Переваги</h2>
+
+						<ul class="product-page__list">
+
+							<li class="product-page__list-item">
+								<span class="product-page__list-icon" aria-hidden="true">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+											stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+										<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+
+								<span class="product-page__list-text">
+									Швидке досягнення гіперемії
+								</span>
+							</li>
+
+							<li class="product-page__list-item">
+								<span class="product-page__list-icon" aria-hidden="true">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+											stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+										<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+
+								<span class="product-page__list-text">
+									Покращення тонусу шкіри
+								</span>
+							</li>
+
+							<li class="product-page__list-item">
+								<span class="product-page__list-icon" aria-hidden="true">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12C21 7.03125 16.9688 3 12 3Z"
+											stroke="#44DC4B" stroke-width="2" stroke-miterlimit="10" />
+										<path d="M16.5 10.125L12 14.625L7.5 10.125" stroke="#44DC4B" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+
+								<span class="product-page__list-text">
+									Бережуть руки та енергію майстра
+								</span>
+							</li>
+
+						</ul>
+
+						<h2 class="product-page__subtitle">Характеристики</h2>
+						<div class="product-page__chars">
+							<p class="product-page__char">Діаметр кільця: 12 см</p>
+							<p class="product-page__char">Матеріал: нержавіюча сталь та дерево</p>
+						</div>
+
+						<div class="product-page__note">
+							<p class="product-page__note-text">
+								Відео-інструкція ручного антицелюлітного масажу всього тіла з використанням кільця Гуаша у
+								подарунок
+							</p>
+							<a class="product-page__note-link"
+								href="https://www.tiktok.com/@shkola_massaga/video/7463549391727529222" target="_blank"
+								rel="noopener">
+								<span>Переглянути відео-інструкцію</span>
+							</a>
+						</div>
+
+						<a class="product-page__btn" href="#">
+							<span>Замовити</span>
+							<span class="product-page__btn-icon" aria-hidden="true">
+								<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+										stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square" />
+								</svg>
+							</span>
+						</a>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+
+				<!-- TOP -->
+				<div class="footer__top">
+
+					<!-- Logo / Brand -->
+					<div class="footer_box">
+						<div class="footer__col footer__col--brand">
+							<a class="footer__brand" href="/" aria-label="Школа масажу Світлани Ретьман">
+								<img class="footer__brand-img" src="./assets/img/footer-logo.svg"
+									alt="Школа масажу — Світлани Ретьман">
+							</a>
+						</div>
+
+						<!-- Navigation -->
+						<nav class="footer__col footer__col--nav" aria-label="Навігація">
+							<h3 class="footer__title">Навігація</h3>
+
+							<ul class="footer__list">
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="courses.html">Курси</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="schedule.html">Розклад</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="shop.html">Магазин</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="aboutSchool.html">Про школу</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="contacts.html">Контакти</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Popular courses -->
+					<div class="footer__col footer__col--courses">
+						<h3 class="footer__title">Популярні курси</h3>
+
+						<ul class="footer__list">
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Авторський масаж обличчя</a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center" href="#">Базові
+									принципи <p>мануальної терапії</p></a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Вісцеральний масаж</a></li>
+						</ul>
+					</div>
+
+					<!-- Contacts -->
+					<div class="footer__col footer__col--contacts">
+						<h3 class="footer__title footer__title--contacts">Контакти</h3>
+						<h3 class="footer__title footer__title--mobile-only">Контакти</h3>
+
+						<div class="footer__contacts">
+							<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+								+38 (097) 169-57-14 (Світлана
+								<p>Ретьман)</p>
+							</a>
+
+							<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+								target="_blank">
+								Адреса Школи: м.Київ, вул. Джона
+								<p>Маккейна 13/2</p>
+							</a>
+
+							<div class="footer__socials" aria-label="Соціальні мережі">
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Viber">
+									<img class="footer__social-icon" src="./assets/img/viber_icon.svg" alt="viber_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+									<img class="footer__social-icon" src="./assets/img/tiktok_icon.svg" alt="tiktok_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Telegram">
+									<img class="footer__social-icon" src="./assets/img/Telegram-Icon.svg" alt="telegram_icon">
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /TOP -->
+
+				<div class="footer__divider" role="presentation"></div>
+
+				<!-- BOTTOM -->
+				<div class="footer__bottom">
+					<ul class="footer__bottom-links">
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Публічна оферта</a>
+						</li>
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Політика конфіденційності</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /BOTTOM -->
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+	<script src="./js/main.js"></script>
+	<script src="./js/jquery.maskedinput.js"></script>
+	<script src="./js/jquery.validate.min.js"></script>
+	<script src="./js/script.js"></script>
+
+</body>
+
+</html>

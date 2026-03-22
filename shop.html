@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="shortcut icon" href="./assets/img/Logo.svg" type="image/x-icon" sizes="32x32">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+	<title>Retman School</title>
+	<!-- Reset -->
+	<link rel="stylesheet" href="./css/normalize.css">
+	<!-- Main styles -->
+	<link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+	<header class="header" id="header">
+		<div class="container">
+			<nav class="nav_desktop">
+				<ul>
+					<li><a href="index.html"><img src="./assets/img/home_img.svg" class="home_img" alt="home_img"></a></li>
+					<li><a class="hover-underline-animation-center" href="courses.html">Курси</a></li>
+					<li><a class="hover-underline-animation-center" href="schedule.html">Розклад</a></li>
+					<li><a class="hover-underline-animation-center" href="shop.html">Магазин</a></li>
+					<li><a class="hover-underline-animation-center" href="aboutSchool.html">Про школу</a></li>
+					<li><a class="hover-underline-animation-center" href="contacts.html">Контакти</a></li>
+					<li class="tel hover-underline-animation-center"><a id="tel" href="tel:+380971695714">+38 (097)
+							169-57-14</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- MOBILE HEADER -->
+		<div class="nav_mobile">
+			<button class="burger" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu"
+				aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+
+			<a class="nav_mobile__logo" href="index.html" aria-label="Головна">
+				<img src="./assets/img/Logo.svg" alt="Школа масажу" onerror="this.style.display='none'">
+				<span style="font-weight:700; display:none;">LOGO</span>
+			</a>
+
+			<a class="nav_mobile__phone" href="tel:+380971695714" aria-label="Подзвонити">
+				<img src="./assets/img/tel.svg" alt="tel">
+
+			</a>
+		</div>
+
+
+
+
+		<!-- Mobile drawer + overlay -->
+		<div class="overlay" id="menuOverlay" hidden></div>
+
+		<aside class="drawer" id="mobileMenu" aria-hidden="true">
+			<div class="drawer__top">
+				<a class="drawer__home" href="index.html" aria-label="Головна">
+					<img src="./assets/img/Logo.svg" alt="" onerror="this.style.display='none'">
+				</a>
+				<button class="drawer__close" type="button" aria-label="Закрити меню">×</button>
+			</div>
+
+			<nav class="drawer__nav">
+				<ul>
+					<li><a href="courses.html">Курси</a></li>
+					<li><a href="schedule.html">Розклад</a></li>
+					<li><a href="shop.html">Магазин</a></li>
+					<li><a href="aboutSchool.html">Про школу</a></li>
+					<li><a href="contacts.html">Контакти</a></li>
+				</ul>
+
+			</nav>
+
+			<div class="drawer__bottom drawer__bottom--contacts">
+				<div class="footer__col footer__col--contacts">
+					<h3 class="footer__title">Контакти</h3>
+
+					<div class="footer__contacts">
+
+						<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+							+38 (097) 169-57-14
+							<span>Світлана Ретьман</span>
+						</a>
+
+						<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+							target="_blank">
+							Адреса школи:
+							<span>м. Київ, вул. Джона Маккейна 13/2</span>
+						</a>
+
+						<div class="footer__socials">
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/viber_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/tiktok_icon.svg" alt="">
+							</a>
+							<a class="footer__social" href="#" target="_blank">
+								<img src="./assets/img/Telegram-Icon.svg" alt="Telegram">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</aside>
+	</header>
+
+
+	<!-- ===================== -->
+	<!-- SHOP (page: Магазин) — FIRST BLOCK (breadcrumbs + title + products grid) -->
+	<!-- Header / Footer already exist -->
+	<!-- ===================== -->
+
+	<section class="shop">
+		<div class="container">
+
+			<!-- breadcrumbs -->
+			<nav class="breadcrumbs shop__breadcrumbs" aria-label="Breadcrumb">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="index.html">Головна</a>
+					</li>
+					<li class="breadcrumbs__item" aria-hidden="true">—</li>
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__current" aria-current="page">Магазин</span>
+					</li>
+				</ol>
+			</nav>
+
+			<!-- title -->
+			<h1 class="shop__title">Магазин</h1>
+
+			<!-- products -->
+			<div class="shop__grid">
+
+				<!-- card 1 -->
+				<article class="shop-card">
+					<a class="shop-card__img" href="gouacheRing.html">
+						<img src="./assets/img/shop-img-1.jpg" alt="Кільце Гуаша">
+					</a>
+
+					<div class="shop-card__body">
+						<h3 class="shop-card__title">
+							<a href="gouacheRing.html">Кільце Гуаша</a>
+						</h3>
+
+						<p class="shop-card__text">
+							Незамінний інструмент для кожного майстра, який прагне дарувати клієнтам в...
+						</p>
+
+						<div class="shop-card__bottom">
+							<div class="shop-card__price">1300 грн</div>
+
+							<!-- ✅ button: open modal -->
+							<a class="shop-card__btn" href="javascript:;" data-fancybox data-src="#orderPopup"
+								data-product="Кільце Гуаша">
+								<span>Замовити</span>
+								<span class="shop-card__btn-icon" aria-hidden="true">
+									<svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+											stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square" />
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</article>
+
+				<!-- card 2 -->
+				<article class="shop-card">
+					<a class="shop-card__img" href="magicTouch.html">
+						<img src="./assets/img/shop-img-2.png" alt="Форма «Магія Дотику»">
+					</a>
+
+					<div class="shop-card__body">
+						<h3 class="shop-card__title">
+							<a href="#">Форма "Магія Дотику"</a>
+						</h3>
+
+						<p class="shop-card__text">
+							Унікальна форма «Магія дотику», створена спеціальн...
+						</p>
+
+						<div class="shop-card__bottom">
+							<div class="shop-card__price">3000 грн</div>
+
+							<a class="shop-card__btn" href="javascript:;" data-fancybox data-src="#orderPopup"
+								data-product="Форма “Магія Дотику”">
+								<span>Замовити</span>
+								<span class="shop-card__btn-icon" aria-hidden="true">
+									<svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path d="M18.8438 7.87509L28.9688 18.0001L18.8438 28.1251M27.5625 18.0001H7.03125"
+											stroke="#F9F9F9" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square" />
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="help">
+		<div class="container">
+			<div class="help__content">
+
+				<h2 class="help__title">
+					Складно обрати?
+				</h2>
+
+				<p class="help__text">
+					Зв'яжіться з нами і ми допоможемо підібрати навчання під ваші потреби!
+				</p>
+
+				<a href="https://t.me/+380971695714" class="help__btn btn btn--primary hvr-float-shadow">
+					<span class="help__btn-text">Ми на зв'язку</span>
+					<span class="help__btn-icon" aria-hidden="true">
+						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+								fill="#0088CC" />
+							<path
+								d="M8.09992 15.7083C12.3949 13.8371 15.2589 12.6034 16.6919 12.0074C20.7834 10.3056 21.6335 10.01 22.1877 10.0001C22.3095 9.99805 22.582 10.0283 22.7586 10.1715C22.9076 10.2924 22.9486 10.4558 22.9683 10.5705C22.9879 10.6851 23.0123 10.9464 22.9929 11.1505C22.7712 13.4801 21.8118 19.1335 21.3237 21.7427C21.1172 22.8468 20.7105 23.217 20.3168 23.2532C19.4613 23.3319 18.8116 22.6878 17.9829 22.1446C16.6862 21.2946 15.9537 20.7654 14.695 19.936C13.2404 18.9774 14.1834 18.4506 15.0124 17.5896C15.2293 17.3643 18.999 13.9355 19.0719 13.6244C19.0811 13.5855 19.0895 13.4405 19.0034 13.3639C18.9172 13.2874 18.7901 13.3136 18.6983 13.3344C18.5683 13.3639 16.4968 14.7331 12.4839 17.4419C11.8959 17.8457 11.3633 18.0424 10.8862 18.0321C10.3601 18.0207 9.34822 17.7346 8.59598 17.4901C7.67333 17.1902 6.94002 17.0316 7.00388 16.5223C7.03714 16.257 7.40248 15.9856 8.09992 15.7083Z"
+								fill="#F9F9F9" />
+						</svg>
+
+					</span>
+				</a>
+
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+
+				<!-- TOP -->
+				<div class="footer__top">
+
+					<!-- Logo / Brand -->
+					<div class="footer_box">
+						<div class="footer__col footer__col--brand">
+							<a class="footer__brand" href="/" aria-label="Школа масажу Світлани Ретьман">
+								<!-- replace with <img> or inline svg -->
+								<img class="footer__brand-img" src="./assets/img/footer-logo.svg"
+									alt="Школа масажу — Світлани Ретьман">
+							</a>
+						</div>
+
+						<!-- Navigation -->
+						<nav class="footer__col footer__col--nav" aria-label="Навігація">
+							<h3 class="footer__title">Навігація</h3>
+
+							<ul class="footer__list">
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="courses.html">Курси</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="schedule.html">Розклад</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="shop.html">Магазин</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="aboutSchool.html">Про
+										школу</a></li>
+								<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+										href="contacts.html">Контакти</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Popular courses -->
+					<div class="footer__col footer__col--courses">
+						<h3 class="footer__title">Популярні курси</h3>
+
+						<ul class="footer__list">
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Авторський масаж обличчя</a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center" href="#">Базові
+									принципи <p>мануальної терапії</p></a></li>
+							<li class="footer__item"><a class="footer__link hover-underline-animation-center"
+									href="#">Вісцеральний масаж</a></li>
+						</ul>
+					</div>
+
+					<!-- Contacts -->
+					<div class="footer__col footer__col--contacts">
+						<h3 class="footer__title footer__title--contacts">Контакти</h3>
+						<h3 class="footer__title footer__title--mobile-only">Контакти</h3>
+
+						<div class="footer__contacts">
+							<a class="footer__contact footer__contact--phone" href="tel:+380971695714">
+								+38 (097) 169-57-14 (Світлана
+								<p>Ретьман)</p>
+							</a>
+
+							<a class="footer__contact footer__contact--address" href="https://share.google/FIEkRzIiAAIyXyaC3"
+								target="_blank">
+								Адреса Школи: м.Київ, вул. Джона
+								<p>Маккейна 13/2</p>
+							</a>
+
+							<div class="footer__socials" aria-label="Соціальні мережі">
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Viber">
+									<!-- icon -->
+									<img class="footer__social-icon" src="./assets/img/viber_icon.svg" alt="viber_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+									<img class="footer__social-icon" src="./assets/img/tiktok_icon.svg" alt="tiktok_icon">
+								</a>
+								<a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Telegram">
+									<img class="footer__social-icon" src="./assets/img/Telegram-Icon.svg" alt="telegram_icon">
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /TOP -->
+
+				<div class="footer__divider" role="presentation"></div>
+
+				<!-- BOTTOM -->
+				<div class="footer__bottom">
+					<ul class="footer__bottom-links">
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Публічна оферта</a>
+						</li>
+						<li class="footer__bottom-item">
+							<a class="footer__bottom-link" href="#">Політика конфіденційності</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /BOTTOM -->
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- ===================== -->
+	<!-- Fancybox inline popup -->
+	<!-- ===================== -->
+	<div class="order-popup" id="orderPopup" style="display: none;">
+		<div class="order-popup__head">
+			<div class="order-popup__title">Оформлення замовлення</div>
+			<div class="order-popup__subtitle">
+				Заповніть форму, і ми зв’яжемося з вами для підтвердження замовлення
+			</div>
+		</div>
+
+		<div class="order-popup__info">
+			<div class="order-popup__product" id="orderPopupProduct">Товар</div>
+			<div class="order-popup__qty">Кількість: <span id="orderPopupQty">1</span></div>
+		</div>
+
+		<form class="order-popup__form" action="#" method="post">
+			<label class="order-popup__field">
+				<span class="order-popup__label">Ім’я та прізвище*</span>
+				<input class="order-popup__input" type="text" name="name" placeholder="Введіть ваше ім’я та прізвище"
+					required>
+			</label>
+
+			<label class="order-popup__field">
+				<span class="order-popup__label">Телефон*</span>
+				<input class="order-popup__input phone" type="tel" name="phone" placeholder="+380 (__) ___-__-__" required>
+			</label>
+
+			<label class="order-popup__field">
+				<span class="order-popup__label">Доставка</span>
+				<input class="order-popup__input" type="text" name="delivery" placeholder="Введіть ваші дані з доставки">
+			</label>
+
+			<label class="order-popup__field">
+				<span class="order-popup__label">Коментар</span>
+				<textarea class="order-popup__textarea" name="comment"
+					placeholder="Розмір, колір або інші побажання"></textarea>
+			</label>
+
+			<button class="order-popup__submit" type="submit">Замовити</button>
+		</form>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/jquery.maskedinput.js"></script>
+	<script src="./js/jquery.validate.min.js"></script>
+	<script src="./js/script.js"></script>
+
+</body>
+
+</html>
