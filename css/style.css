@@ -7707,10 +7707,10 @@ body {
 .masterclasses-btn span {
   margin-left: 10px;
 }
-@media (max-width: 576px) {
+@media (max-width: 620px) {
   .masterclasses-btn {
-    display: block;
-    width: 100%;
+    display: block!important;
+    width: 100%!important;
   }
 }
 
