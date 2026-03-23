@@ -7206,8 +7206,8 @@ body {
     margin-top: auto;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 10px 1fr;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 }
@@ -7707,10 +7707,9 @@ body {
 .masterclasses-btn span {
   margin-left: 10px;
 }
-@media (max-width: 620px) {
+@media (max-width: 576px) {
   .masterclasses-btn {
-    display: block!important;
-    width: 100%!important;
+    width: auto;
   }
 }
 
