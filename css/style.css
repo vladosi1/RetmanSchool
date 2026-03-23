@@ -7709,7 +7709,8 @@ body {
 }
 @media (max-width: 576px) {
   .masterclasses-btn {
-    width: auto;
+    display: block;
+    width: 100%;
   }
 }
 
