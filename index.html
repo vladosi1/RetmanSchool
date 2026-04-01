@@ -197,7 +197,7 @@
 		</div>
 	</main>
 
-	<section class="popular">
+		<section class="popular">
 		<div class="container">
 			<div class="popular__title-none">Популярні курси</div>
 			<a class="popular__all btn btn--primary hvr-float-shadow popular__all-none" href="courses.html">
@@ -260,9 +260,11 @@
 							</div>
 
 							<div class="popular-card__actions">
-								<a class="popular-card__btn popular-card__btn--primary js-course-popup-open" href="javascript:;"
-									data-fancybox data-src="#courseSignupPopup">
-									Записатись
+								<a href="#"
+									class="popular-card__btn popular-card__btn--primary btn btn--primary js-course-popup-trigger"
+									data-course-id="offline-authors-facial-massage" data-course-name="Авторський масаж обличчя"
+									data-course-format="Офлайн">
+									<span>Записатись</span>
 								</a>
 								<a class="popular-card__btn popular-card__btn--ghost"
 									href="offline-authors-facial-massage.html">
@@ -301,9 +303,11 @@
 							</div>
 
 							<div class="popular-card__actions">
-								<a class="popular-card__btn popular-card__btn--primary js-course-popup-open" href="javascript:;"
-									data-fancybox data-src="#courseSignupPopup">
-									Записатись
+								<a href="#"
+									class="popular-card__btn popular-card__btn--primary btn btn--primary js-course-popup-trigger"
+									data-course-id="offline-basic-massage-course" data-course-name="Базовий курс масажу"
+									data-course-format="Офлайн">
+									<span>Записатись</span>
 								</a>
 								<a class="popular-card__btn popular-card__btn--ghost" href="offline-basic-massage-course.html">
 									Детальніше
@@ -341,9 +345,11 @@
 							</div>
 
 							<div class="popular-card__actions">
-								<a class="popular-card__btn popular-card__btn--primary js-course-popup-open" href="javascript:;"
-									data-fancybox data-src="#courseSignupPopup">
-									Записатись
+								<a href="#"
+									class="popular-card__btn popular-card__btn--primary btn btn--primary js-course-popup-trigger"
+									data-course-id="offline-visceral-massage" data-course-name="Вісцеральний масаж"
+									data-course-format="Офлайн">
+									<span>Записатись</span>
 								</a>
 								<a class="popular-card__btn popular-card__btn--ghost" href="offline-visceral-massage.html">
 									Детальніше
@@ -352,8 +358,8 @@
 						</article>
 
 						<!-- slide 4 -->
-						<article class="popular-card swiper-slide" data-course-card data-course-id="visceral-massage"
-							data-course-title="Вісцеральний масаж" data-course-format="Офлайн">
+						<article class="popular-card swiper-slide" data-course-card data-course-id="yumeiho-therapy"
+							data-course-title="Юмейхо терапія" data-course-format="Офлайн">
 							<div class="popular-card__top">
 								<div class="popular-card__badge popular-card__badge--teacher">
 									Викладач: Олександр Зінчук
@@ -376,14 +382,15 @@
 							</p>
 
 							<div class="popular-card__media">
-								<img src="./assets/img/offline-yumeiho-therapy-main-img_220x127.png" alt="Вісцеральний масаж">
+								<img src="./assets/img/offline-yumeiho-therapy-main-img_220x127.png" alt="Юмейхо терапія">
 							</div>
 
 							<div class="popular-card__actions">
-								<a class="popular-card__btn popular-card__btn--primary js-course-popup-open" href="javascript:;"
-									data-fancybox data-src="#courseSignupPopup" data-course-id="offline-yumeiho-therapy"
-									data-course-name="Юмейхо терапія" data-course-format="Офлайн">
-									Записатись
+								<a href="#"
+									class="popular-card__btn popular-card__btn--primary btn btn--primary js-course-popup-trigger"
+									data-course-id="offline-yumeiho-therapy" data-course-name="Юмейхо терапія"
+									data-course-format="Офлайн">
+									<span>Записатись</span>
 								</a>
 								<a class="popular-card__btn popular-card__btn--ghost" href="offline-yumeiho-therapy.html">
 									Детальніше
@@ -391,8 +398,8 @@
 							</div>
 						</article>
 						<!-- slide 5 -->
-						<article class="popular-card swiper-slide" data-course-card data-course-id="authors-facial-massage"
-							data-course-title="Авторський масаж обличчя" data-course-format="Офлайн">
+						<article class="popular-card swiper-slide" data-course-card data-course-id="dasian-manual-therapy"
+							data-course-title="базові принципи мануальної терапії" data-course-format="Офлайн">
 							<div class="popular-card__top">
 								<div class="popular-card__badge popular-card__badge--teacher">
 									Викладач: Андрій Маслій
@@ -421,9 +428,11 @@
 							</div>
 
 							<div class="popular-card__actions">
-								<a class="popular-card__btn popular-card__btn--primary js-course-popup-open" href="javascript:;"
-									data-fancybox data-src="#courseSignupPopup">
-									Записатись
+								<a href="#"
+									class="popular-card__btn popular-card__btn--primary btn btn--primary js-course-popup-trigger"
+									data-course-id="offline-dasian-manual-therapy"
+									data-course-name="Базові принципи мануальної терапії" data-course-format="Офлайн">
+									<span>Записатись</span>
 								</a>
 								<a class="popular-card__btn popular-card__btn--ghost" href="offline-manual-therapy.html">
 									Детальніше
@@ -447,59 +456,6 @@
 			</div>
 		</div>
 	</section>
-
-	<!-- popup -->
-	<!-- ===================== -->
-	<!-- Universal course popup -->
-	<!-- ===================== -->
-	<div class="order-popup course-popup" id="courseSignupPopup" style="display: none;">
-		<div class="order-popup__head">
-			<div class="order-popup__title">Записатись на подію</div>
-			<div class="order-popup__subtitle">
-				Заповніть форму, і ми зв’яжемося з вами для підтвердження запису
-			</div>
-		</div>
-
-		<div class="order-popup__info">
-			<div class="order-popup__product" id="coursePopupTitle">Назва курсу</div>
-			<div class="order-popup__qty">
-				Формат: <span id="coursePopupFormat">—</span>
-			</div>
-		</div>
-
-		<form class="order-popup__form js-course-signup-form" action="#" method="post" novalidate>
-			<!-- hidden fields -->
-			<input type="hidden" name="course_id" id="coursePopupId" value="">
-			<input type="hidden" name="course_name" id="coursePopupNameField" value="">
-			<input type="hidden" name="course_format" id="coursePopupFormatField" value="">
-
-			<label class="order-popup__field">
-				<span class="order-popup__label">Ім’я та прізвище*</span>
-				<input class="order-popup__input" type="text" name="name" placeholder="Введіть ваше ім’я та прізвище"
-					required>
-			</label>
-
-			<label class="order-popup__field">
-				<span class="order-popup__label ">Телефон*</span>
-				<input class="order-popup__input js-phone-input phone" type="tel" name="phone"
-					placeholder="+380 (__) ___-__-__" inputmode="tel" required>
-			</label>
-
-
-			<label class="order-popup__field">
-				<span class="order-popup__label">Коментар</span>
-				<textarea class="order-popup__textarea" name="comment"
-					placeholder="Ваші побажання або запитання"></textarea>
-			</label>
-
-			<div class="order-popup__response" id="coursePopupResponse" hidden></div>
-
-			<button class="order-popup__submit" type="submit">
-				Підтвердити запис
-			</button>
-		</form>
-	</div>
-	<!-- popup -->
 
 	<section class="help">
 		<div class="container">
@@ -1330,6 +1286,67 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Universal course popup -->
+	<div class="order-popup course-popup" id="courseSignupPopup" style="display: none;">
+		<div class="order-popup__head">
+			<div class="order-popup__title">Записатись на курс</div>
+			<div class="order-popup__subtitle">
+				Заповніть форму, і ми зв’яжемося з вами для підтвердження запису
+			</div>
+		</div>
+
+		<div class="order-popup__info">
+			<div class="order-popup__product" id="coursePopupTitle">Назва курсу</div>
+			<div class="order-popup__qty">
+				Формат: <span id="coursePopupFormat">—</span>
+			</div>
+
+			<div class="order-popup__qty" id="coursePopupSelectedRow" hidden>
+				Варіант участі: <span id="coursePopupSelectedText">—</span>
+			</div>
+		</div>
+
+		<form class="order-popup__form js-course-signup-form" action="#" method="post" novalidate>
+			<input type="hidden" name="course_id" id="coursePopupId" value="">
+			<input type="hidden" name="course_name" id="coursePopupNameField" value="">
+			<input type="hidden" name="course_format" id="coursePopupFormatField" value="">
+			<input type="hidden" name="course_option_value" id="coursePopupOptionValueField" value="">
+			<input type="hidden" name="course_option_label" id="coursePopupOptionLabelField" value="">
+			<input type="hidden" name="course_option_price" id="coursePopupOptionPriceField" value="">
+			<input type="hidden" name="form_type" value="course_signup">
+
+			<div class="order-popup__field order-popup__field--options" id="coursePopupOptionsWrap" hidden>
+				<span class="order-popup__label">Оберіть варіант участі*</span>
+				<div class="order-popup__options" id="coursePopupOptions"></div>
+			</div>
+
+			<label class="order-popup__field">
+				<span class="order-popup__label">Ім’я та прізвище*</span>
+				<input class="order-popup__input" type="text" name="name" placeholder="Введіть ваше ім’я та прізвище"
+					required>
+			</label>
+
+			<label class="order-popup__field">
+				<span class="order-popup__label">Телефон*</span>
+				<input class="order-popup__input js-phone-input phone" type="tel" name="phone"
+					placeholder="+380 (__) ___-__-__" inputmode="tel" required>
+			</label>
+
+			<label class="order-popup__field">
+				<span class="order-popup__label">Коментар</span>
+				<textarea class="order-popup__textarea" name="comment"
+					placeholder="Ваші побажання або запитання"></textarea>
+			</label>
+
+			<div class="order-popup__response" id="coursePopupResponse" hidden></div>
+
+			<button class="order-popup__submit" type="submit">
+				Підтвердити запис
+			</button>
+		</form>
+	</div>
+	<!-- /Universal course popup -->
 
 
 
