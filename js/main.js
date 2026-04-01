@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				"./assets/img/teachers_teacher-2.jpg",
 				"./assets/img/teachers_teacher-4.jpg",
 				"./assets/img/teachers_teacher-3.jpg",
-				
+
 			]
 		},
 		{
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				"./assets/img/teachers_teacher-2.jpg",
 				"./assets/img/roman_f.png",
 				"./assets/img/teachers_teacher-4.jpg",
-				
+
 			]
 		},
 		{
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				"./assets/img/teachers_teacher-2.jpg",
 				"./assets/img/teachers_teacher-4.jpg",
 				"./assets/img/teachers_teacher-1.jpg",
-				
+
 			]
 		},
 	];
@@ -828,32 +828,93 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //pop-up courses
-$(document).on('click', '.js-course-popup-trigger', function (e) {
-	e.preventDefault();
 
-	var $trigger = $(this);
+(function () {
+	function resetPopupMeta() {
+		$('#coursePopupOptionValueField').val('');
+		$('#coursePopupOptionLabelField').val('');
+		$('#coursePopupOptionPriceField').val('');
+		$('#coursePopupSelectedText').text('—');
+		$('#coursePopupSelectedRow').prop('hidden', true);
 
-	var courseId = $trigger.data('course-id') || '';
-	var courseName = $trigger.data('course-name') || 'Назва курсу';
-	var courseFormat = $trigger.data('course-format') || '—';
-
-	$('#coursePopupTitle').text(courseName);
-	$('#coursePopupFormat').text(courseFormat);
-
-	$('#coursePopupId').val(courseId);
-	$('#coursePopupNameField').val(courseName);
-	$('#coursePopupFormatField').val(courseFormat);
-
-	if ($.fancybox) {
-		$.fancybox.open({
-			src: '#courseSignupPopup',
-			type: 'inline',
-			touch: false
-		});
-	} else {
-		$('#courseSignupPopup').show();
+		$('#coursePopupTariffLabelField').val('');
+		$('#coursePopupTariffPriceField').val('');
+		$('#coursePopupTariffText').text('—');
+		$('#coursePopupTariffRow').prop('hidden', true);
 	}
-});
+
+	function setPopupOption(optionLabel, optionPrice, optionValue) {
+		$('#coursePopupOptionValueField').val(optionValue || '');
+		$('#coursePopupOptionLabelField').val(optionLabel || '');
+		$('#coursePopupOptionPriceField').val(optionPrice || '');
+
+		if (optionLabel) {
+			$('#coursePopupSelectedText').text(optionPrice ? optionLabel + ' — ' + optionPrice : optionLabel);
+			$('#coursePopupSelectedRow').prop('hidden', false);
+		}
+	}
+
+	function setPopupTariff(tariffLabel, tariffPrice) {
+		$('#coursePopupTariffLabelField').val(tariffLabel || '');
+		$('#coursePopupTariffPriceField').val(tariffPrice || '');
+
+		if (tariffLabel) {
+			$('#coursePopupTariffText').text(tariffPrice ? tariffLabel + ' — ' + tariffPrice : tariffLabel);
+			$('#coursePopupTariffRow').prop('hidden', false);
+		}
+	}
+
+	$(document).on('click', '.js-course-popup-trigger', function (e) {
+		e.preventDefault();
+
+		var $trigger = $(this);
+		var $courseCard = $trigger.closest('[data-course-card]');
+
+		var courseId = $trigger.data('course-id') || '';
+		var courseName = $trigger.data('course-name') || 'Назва курсу';
+		var courseFormat = $trigger.data('course-format') || '—';
+
+		var tariffLabel = $trigger.data('course-tariff') || '';
+		var tariffPrice = $trigger.data('course-tariff-price') || '';
+
+		resetPopupMeta();
+
+		$('#coursePopupTitle').text(courseName);
+		$('#coursePopupFormat').text(courseFormat);
+
+		$('#coursePopupId').val(courseId);
+		$('#coursePopupNameField').val(courseName);
+		$('#coursePopupFormatField').val(courseFormat);
+
+		if ($courseCard.length) {
+			var $selectedOption = $courseCard.find('.course-card__option-input:checked').first();
+
+			if ($selectedOption.length) {
+				var optionValue = $selectedOption.val() || '';
+				var optionLabel = $selectedOption.data('option-label') || '';
+				var optionPrice = $selectedOption.data('option-price') || '';
+
+				setPopupOption(optionLabel, optionPrice, optionValue);
+			}
+		}
+
+		if (tariffLabel) {
+			setPopupTariff(tariffLabel, tariffPrice);
+		}
+
+		$('#coursePopupResponse').prop('hidden', true).empty();
+
+		if ($.fancybox) {
+			$.fancybox.open({
+				src: '#courseSignupPopup',
+				type: 'inline',
+				touch: false
+			});
+		} else {
+			$('#courseSignupPopup').show();
+		}
+	});
+})();
 //pop-up courses
 
 
@@ -945,3 +1006,100 @@ document.querySelectorAll('[data-master-card]').forEach((card) => {
 		});
 	});
 });
+
+// modal popup schedule
+document.addEventListener('DOMContentLoaded', function () {
+	const signupModal = document.getElementById('signupModal');
+
+	if (!signupModal) return;
+
+	const modalFields = {
+		title: signupModal.querySelector('[data-modal-title]'),
+		date: signupModal.querySelector('[data-modal-date]'),
+		time: signupModal.querySelector('[data-modal-time]'),
+		format: signupModal.querySelector('[data-modal-format]'),
+		place: signupModal.querySelector('[data-modal-place]'),
+		teacher: signupModal.querySelector('[data-modal-teacher]')
+	};
+
+	const hiddenFields = {
+		id: signupModal.querySelector('[data-modal-event-id]'),
+		title: signupModal.querySelector('[data-modal-hidden-title]'),
+		date: signupModal.querySelector('[data-modal-hidden-date]'),
+		time: signupModal.querySelector('[data-modal-hidden-time]'),
+		format: signupModal.querySelector('[data-modal-hidden-format]'),
+		place: signupModal.querySelector('[data-modal-hidden-place]'),
+		teacher: signupModal.querySelector('[data-modal-hidden-teacher]')
+	};
+
+	const form = signupModal.querySelector('[data-signup-form]');
+
+	function setText(element, value) {
+		if (element) {
+			element.textContent = value || '—';
+		}
+	}
+
+	function setValue(element, value) {
+		if (element) {
+			element.value = value || '';
+		}
+	}
+
+	signupModal.addEventListener('show.bs.modal', function (event) {
+		const trigger = event.relatedTarget;
+		if (!trigger) return;
+
+		const card = trigger.closest('[data-event-card]');
+		if (!card) return;
+
+		const eventData = {
+			id: card.getAttribute('data-event-id') || '',
+			title: card.getAttribute('data-event-title') || '',
+			date: card.getAttribute('data-event-date') || '',
+			time: card.getAttribute('data-event-time') || '',
+			format: card.getAttribute('data-event-format') || '',
+			place: card.getAttribute('data-event-place') || '',
+			teacher: card.getAttribute('data-event-teacher') || ''
+		};
+
+		// preview in modal
+		setText(modalFields.title, eventData.title);
+		setText(modalFields.date, eventData.date);
+		setText(modalFields.time, eventData.time);
+		setText(modalFields.format, eventData.format);
+		setText(modalFields.place, eventData.place);
+		setText(modalFields.teacher, eventData.teacher);
+
+		// hidden inputs for form submit
+		setValue(hiddenFields.id, eventData.id);
+		setValue(hiddenFields.title, eventData.title);
+		setValue(hiddenFields.date, eventData.date);
+		setValue(hiddenFields.time, eventData.time);
+		setValue(hiddenFields.format, eventData.format);
+		setValue(hiddenFields.place, eventData.place);
+		setValue(hiddenFields.teacher, eventData.teacher);
+	});
+
+	signupModal.addEventListener('hidden.bs.modal', function () {
+		setText(modalFields.title, 'Назва події');
+		setText(modalFields.date, '—');
+		setText(modalFields.time, '—');
+		setText(modalFields.format, '—');
+		setText(modalFields.place, '—');
+		setText(modalFields.teacher, '—');
+
+		setValue(hiddenFields.id, '');
+		setValue(hiddenFields.title, '');
+		setValue(hiddenFields.date, '');
+		setValue(hiddenFields.time, '');
+		setValue(hiddenFields.format, '');
+		setValue(hiddenFields.place, '');
+		setValue(hiddenFields.teacher, '');
+
+		if (form) {
+			form.reset();
+		}
+	});
+});
+// modal popup schedule
